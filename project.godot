@@ -14,3 +14,7 @@ config/name="Friday Night Funkin'"
 run/main_scene="uid://vqnbg7tx1o1q"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://benm23nk1o2jb"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sprite_importer/plugin.cfg")
