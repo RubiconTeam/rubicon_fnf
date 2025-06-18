@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Friday Night Funkin'"
+config/name="Rubicon Engine: Friday Night Funkin'"
 run/main_scene="uid://vqnbg7tx1o1q"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://benm23nk1o2jb"
