@@ -18,3 +18,7 @@ config/icon="uid://benm23nk1o2jb"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/sprite_importer/plugin.cfg")
+
+[rubicon_engine]
+
+environment/name="Rubicon Engine: Friday Night Funkin'"
