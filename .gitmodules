@@ -1,3 +1,9 @@
 [submodule "sprite_importer"]
 	path = addons/sprite_importer
 	url = https://github.com/legole0/sprite_importer
+[submodule "addons/rubicon"]
+	path = addons/rubicon
+	url = https://github.com/RubiconTeam/rubicon.git
+[submodule "addons/rubichart_converter"]
+	path = addons/rubichart_converter
+	url = https://github.com/RubiconTeam/rubichart_converter.git
