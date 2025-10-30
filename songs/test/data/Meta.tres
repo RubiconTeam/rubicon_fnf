@@ -1,27 +1,14 @@
-[gd_resource type="RubiconSongMeta" load_steps=7 format=3 uid="uid://4ph8lnaani80"]
+[gd_resource type="Resource" script_class="RubiconLevelMetadata" load_steps=4 format=3 uid="uid://ovvjrs3mfgbs"]
 
-[ext_resource type="RubiChart" uid="uid://daxmgvjmuqj2o" path="res://songs/test/data/Mania-Snapped.rbc" id="1_v8cn3"]
-[ext_resource type="AudioStream" uid="uid://c47s5rt0vjh0q" path="res://songs/test/Inst.ogg" id="2_qk1t5"]
-[ext_resource type="AudioStream" uid="uid://i1jw6ewumun6" path="res://songs/test/Vocals.ogg" id="3_sfonj"]
+[ext_resource type="Script" uid="uid://bn0j3jpwu1e0p" path="res://addons/rubicon/scripts/data/rubicon_level_metadata.gd" id="1_ivl83"]
+[ext_resource type="Script" uid="uid://c1dyvxe4okjkv" path="res://addons/rubicon/scripts/data/rubicon_time_change.gd" id="2_v8cn3"]
 
-[sub_resource type="RubiconCharacterMeta" id="RubiconCharacterMeta_v8cn3"]
-character = "res://resources/game/characters/placeholder.tscn"
-nickname = &"Player"
-bar_line = &"Player"
-
-[sub_resource type="RubiconCharacterMeta" id="RubiconCharacterMeta_qk1t5"]
-character = "res://resources/game/characters/placeholder.tscn"
-nickname = &"Opponent"
-bar_line = &"Opponent"
-
-[sub_resource type="RubiconSongDifficulty" id="RubiconSongDifficulty_qk1t5"]
-resource_name = "Normal"
-name = "Normal"
-chart = ExtResource("1_v8cn3")
+[sub_resource type="Resource" id="Resource_qk1t5"]
+script = ExtResource("2_v8cn3")
+bpm = 150.0
+time_signature_numerator = 4.0
+time_signature_denominator = 4.0
 
 [resource]
-name = "Test"
-artist = "Hideo Kojima"
-instrumental = ExtResource("2_qk1t5")
-vocals = ExtResource("3_sfonj")
-difficulties = Array[RubiconSongDifficulty]([SubResource("RubiconSongDifficulty_qk1t5")])
+script = ExtResource("1_ivl83")
+time_changes = Array[ExtResource("2_v8cn3")]([SubResource("Resource_qk1t5")])

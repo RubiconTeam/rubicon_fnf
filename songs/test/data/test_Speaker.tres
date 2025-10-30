@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RubiChart" load_steps=4 format=3 uid="uid://cssqfls8u5s7x"]
+
+[ext_resource type="Script" uid="uid://iwh2edatglg5" path="res://addons/rubicon/scripts/data/chart/rubichart.gd" id="1_l4wsd"]
+[ext_resource type="Script" uid="uid://cqv0q12des2ei" path="res://addons/rubicon/scripts/data/chart/rubichart_scroll_velocity.gd" id="2_pahcr"]
+[ext_resource type="Script" uid="uid://vft2yke1y47m" path="res://addons/rubicon/scripts/data/chart/rubichart_section.gd" id="3_14n0v"]
+
+[resource]
+script = ExtResource("1_l4wsd")
+scroll_multiplier = 1.6
