@@ -11,5 +11,5 @@ metadata/_custom_type_script = "uid://c1dyvxe4okjkv"
 
 [resource]
 script = ExtResource("2_csfvy")
-title = "Bopeebo"
+title = "Test"
 time_changes = Array[ExtResource("3_xed3a")]([SubResource("Resource_pwsoq")])

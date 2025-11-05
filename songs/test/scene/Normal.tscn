@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bte2jyircefco"]
+[gd_scene load_steps=14 format=3 uid="uid://bte2jyircefco"]
 
 [ext_resource type="Script" uid="uid://c7espnyhcgtth" path="res://addons/rubicon/scripts/scene/2d/rubicon_level_2d.gd" id="1_pgenk"]
 [ext_resource type="Resource" uid="uid://ovvjrs3mfgbs" path="res://songs/test/Meta.tres" id="2_3gogm"]
@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://bc7ok4wpv7mk4" path="res://addons/rubicon_mania/resources/default_noteskin.tres" id="8_nnwp4"]
 [ext_resource type="PackedScene" uid="uid://328a2rb4wto0" path="res://addons/rubicon_mania/resources/skins/default/Lane.tscn" id="9_nnwp4"]
 [ext_resource type="Resource" uid="uid://ndurlv0cfk5o" path="res://addons/rubicon_mania/resources/default_settings.tres" id="10_h6s6i"]
+[ext_resource type="Resource" uid="uid://bdtpofcdwsqwh" path="res://songs/test/data/test_Player.tres" id="11_h6s6i"]
 
 [sub_resource type="Animation" id="Animation_hmr2h"]
 resource_name = "scene"
@@ -111,12 +112,6 @@ global_direction = -1.571
 lane_id = 1
 settings = ExtResource("10_h6s6i")
 
-[node name="Outline" parent="UILayer/UI/Opponent/Lane2" index="0"]
-animation = &"ArrowDef_Down_Outline"
-
-[node name="Fill" parent="UILayer/UI/Opponent/Lane2/Outline" index="1"]
-animation = &"ArrowFill_Down"
-
 [node name="Lane3" parent="UILayer/UI/Opponent" instance=ExtResource("9_nnwp4")]
 layout_mode = 1
 offset_left = 80.0
@@ -133,6 +128,51 @@ global_direction = -1.571
 lane_id = 3
 settings = ExtResource("10_h6s6i")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Player" type="Control" parent="UILayer/UI"]
+layout_mode = 1
+anchor_left = 0.75
+anchor_top = 1.0
+anchor_right = 0.75
+anchor_bottom = 1.0
+offset_top = -160.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("5_kfswo")
+chart = ExtResource("11_h6s6i")
+noteskin = ExtResource("8_nnwp4")
+autoplay = true
+metadata/_custom_type_script = "uid://dpaagofnwlljw"
 
-[editable path="UILayer/UI/Opponent/Lane2"]
+[node name="Lane" parent="UILayer/UI/Player" instance=ExtResource("9_nnwp4")]
+layout_mode = 1
+offset_left = -240.0
+offset_right = -240.0
+global_direction = -1.571
+settings = ExtResource("10_h6s6i")
+
+[node name="Lane2" parent="UILayer/UI/Player" instance=ExtResource("9_nnwp4")]
+layout_mode = 1
+offset_left = -80.0
+offset_right = -80.0
+global_direction = -1.571
+lane_id = 1
+settings = ExtResource("10_h6s6i")
+
+[node name="Lane3" parent="UILayer/UI/Player" instance=ExtResource("9_nnwp4")]
+layout_mode = 1
+offset_left = 80.0
+offset_right = 80.0
+global_direction = -1.571
+lane_id = 2
+settings = ExtResource("10_h6s6i")
+
+[node name="Lane4" parent="UILayer/UI/Player" instance=ExtResource("9_nnwp4")]
+layout_mode = 1
+offset_left = 240.0
+offset_right = 240.0
+global_direction = -1.571
+lane_id = 3
+settings = ExtResource("10_h6s6i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
