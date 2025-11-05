@@ -15,9 +15,14 @@ run/main_scene="uid://vqnbg7tx1o1q"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="uid://benm23nk1o2jb"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/rubichart_converter/plugin.cfg", "res://addons/sprite_importer/plugin.cfg")
+enabled=PackedStringArray("res://addons/rubichart_converter/plugin.cfg", "res://addons/sprite_importer/plugin.cfg", "res://addons/spriteframes_keyframer/plugin.cfg")
 
 [rubicon_engine]
 

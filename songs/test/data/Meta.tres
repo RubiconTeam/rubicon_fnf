@@ -1,14 +1,13 @@
-[gd_resource type="Resource" script_class="RubiconLevelMetadata" load_steps=4 format=3 uid="uid://ovvjrs3mfgbs"]
+[gd_resource type="Resource" script_class="RubiconLevelMetadata" load_steps=5 format=3 uid="uid://cm74yvr36pk64"]
 
-[ext_resource type="Script" uid="uid://bn0j3jpwu1e0p" path="res://addons/rubicon/scripts/data/rubicon_level_metadata.gd" id="1_ivl83"]
-[ext_resource type="Script" uid="uid://c1dyvxe4okjkv" path="res://addons/rubicon/scripts/data/rubicon_time_change.gd" id="2_v8cn3"]
+[ext_resource type="Script" uid="uid://bc3yyfgu0v8yh" path="res://addons/rubicon/scripts/data/rubicon_level_metadata_difficulty.gd" id="1_v8cn3"]
+[ext_resource type="Script" uid="uid://bn0j3jpwu1e0p" path="res://addons/rubicon/scripts/data/rubicon_level_metadata.gd" id="2_qk1t5"]
+[ext_resource type="Script" uid="uid://c1dyvxe4okjkv" path="res://addons/rubicon/scripts/data/rubicon_time_change.gd" id="3_sfonj"]
 
-[sub_resource type="Resource" id="Resource_qk1t5"]
-script = ExtResource("2_v8cn3")
+[sub_resource type="Resource" id="Resource_v8cn3"]
+script = ExtResource("3_sfonj")
 bpm = 150.0
-time_signature_numerator = 4.0
-time_signature_denominator = 4.0
 
 [resource]
-script = ExtResource("1_ivl83")
-time_changes = Array[ExtResource("2_v8cn3")]([SubResource("Resource_qk1t5")])
+script = ExtResource("2_qk1t5")
+time_changes = Array[ExtResource("3_sfonj")]([SubResource("Resource_v8cn3")])

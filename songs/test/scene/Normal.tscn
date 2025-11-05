@@ -1,0 +1,138 @@
+[gd_scene load_steps=13 format=3 uid="uid://bte2jyircefco"]
+
+[ext_resource type="Script" uid="uid://c7espnyhcgtth" path="res://addons/rubicon/scripts/scene/2d/rubicon_level_2d.gd" id="1_pgenk"]
+[ext_resource type="Resource" uid="uid://ovvjrs3mfgbs" path="res://songs/test/Meta.tres" id="2_3gogm"]
+[ext_resource type="Script" uid="uid://ca1311fn5lngq" path="res://addons/rubicon/scripts/scene/rubcion_level_clock.gd" id="2_hmr2h"]
+[ext_resource type="AudioStream" uid="uid://c47s5rt0vjh0q" path="res://songs/test/resources/Inst.ogg" id="3_bqm08"]
+[ext_resource type="AudioStream" uid="uid://i1jw6ewumun6" path="res://songs/test/resources/Vocals.ogg" id="4_qwobi"]
+[ext_resource type="Script" uid="uid://dpaagofnwlljw" path="res://addons/rubicon/scripts/scene/game/rubicon_level_note_controller.gd" id="5_kfswo"]
+[ext_resource type="Resource" uid="uid://bc3ph1v0630rv" path="res://songs/test/data/test_Opponent.tres" id="7_nnwp4"]
+[ext_resource type="Resource" uid="uid://bc7ok4wpv7mk4" path="res://addons/rubicon_mania/resources/default_noteskin.tres" id="8_nnwp4"]
+[ext_resource type="PackedScene" uid="uid://328a2rb4wto0" path="res://addons/rubicon_mania/resources/skins/default/Lane.tscn" id="9_nnwp4"]
+[ext_resource type="Resource" uid="uid://ndurlv0cfk5o" path="res://addons/rubicon_mania/resources/default_settings.tres" id="10_h6s6i"]
+
+[sub_resource type="Animation" id="Animation_hmr2h"]
+resource_name = "scene"
+length = 102.468
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Instrumental")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_bqm08")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Vocals")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_qwobi")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qunsj"]
+_data = {
+&"scene": SubResource("Animation_hmr2h")
+}
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_pgenk")
+metadata = ExtResource("2_3gogm")
+metadata/_custom_type_script = "uid://c7espnyhcgtth"
+
+[node name="RubiconLevelClock" type="Node" parent="."]
+script = ExtResource("2_hmr2h")
+metadata/_custom_type_script = "uid://ca1311fn5lngq"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RubiconLevelClock"]
+libraries = {
+&"": SubResource("AnimationLibrary_qunsj")
+}
+
+[node name="Instrumental" type="AudioStreamPlayer" parent="."]
+
+[node name="Vocals" type="AudioStreamPlayer" parent="."]
+
+[node name="Stage" type="Node2D" parent="."]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Opponent" type="Control" parent="UILayer/UI"]
+layout_mode = 1
+anchor_left = 0.25
+anchor_top = 1.0
+anchor_right = 0.25
+anchor_bottom = 1.0
+offset_top = -160.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("5_kfswo")
+chart = ExtResource("7_nnwp4")
+noteskin = ExtResource("8_nnwp4")
+autoplay = true
+metadata/_custom_type_script = "uid://dpaagofnwlljw"
+
+[node name="Lane" parent="UILayer/UI/Opponent" instance=ExtResource("9_nnwp4")]
+layout_mode = 1
+offset_left = -240.0
+offset_right = -240.0
+global_direction = -1.571
+settings = ExtResource("10_h6s6i")
+
+[node name="Lane2" parent="UILayer/UI/Opponent" instance=ExtResource("9_nnwp4")]
+layout_mode = 1
+offset_left = -80.0
+offset_right = -80.0
+global_direction = -1.571
+lane_id = 1
+settings = ExtResource("10_h6s6i")
+
+[node name="Outline" parent="UILayer/UI/Opponent/Lane2" index="0"]
+animation = &"ArrowDef_Down_Outline"
+
+[node name="Fill" parent="UILayer/UI/Opponent/Lane2/Outline" index="1"]
+animation = &"ArrowFill_Down"
+
+[node name="Lane3" parent="UILayer/UI/Opponent" instance=ExtResource("9_nnwp4")]
+layout_mode = 1
+offset_left = 80.0
+offset_right = 80.0
+global_direction = -1.571
+lane_id = 2
+settings = ExtResource("10_h6s6i")
+
+[node name="Lane4" parent="UILayer/UI/Opponent" instance=ExtResource("9_nnwp4")]
+layout_mode = 1
+offset_left = 240.0
+offset_right = 240.0
+global_direction = -1.571
+lane_id = 3
+settings = ExtResource("10_h6s6i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[editable path="UILayer/UI/Opponent/Lane2"]

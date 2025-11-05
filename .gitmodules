@@ -10,9 +10,6 @@
 [submodule "addons/rubicon_mania"]
 	path = addons/rubicon_mania
 	url = https://github.com/RubiconTeam/rubicon_mania.git
-[submodule "spriteframes_keyframer"]
-	path = spriteframes_keyframer
-	url = https://github.com/anniebuue/spriteframes_keyframer.git
 [submodule "addons/spriteframes_keyframer"]
 	path = addons/spriteframes_keyframer
 	url = https://github.com/anniebuue/spriteframes_keyframer.git
