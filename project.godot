@@ -20,10 +20,14 @@ config/icon="uid://benm23nk1o2jb"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[dotnet]
+
+project/assembly_name="Rubicon Engine- Friday Night Funkin-"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/rubichart_converter/plugin.cfg", "res://addons/sprite_importer/plugin.cfg", "res://addons/spriteframes_keyframer/plugin.cfg")
+enabled=PackedStringArray("res://addons/rubichart_converter/plugin.cfg", "res://addons/rubicon/plugin.cfg", "res://addons/sprite_importer/plugin.cfg", "res://addons/spriteframes_keyframer/plugin.cfg")
 
-[rubicon_engine]
+[rubicon]
 
-environment/name="Rubicon Engine: Friday Night Funkin'"
+defaults/note_database="uid://bvhsfvptfwijt"
