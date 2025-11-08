@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c7espnyhcgtth" path="res://addons/rubicon/scripts/scene/2d/rubicon_level_2d.gd" id="1_pgenk"]
 [ext_resource type="Resource" uid="uid://ovvjrs3mfgbs" path="res://songs/test/Meta.tres" id="2_3gogm"]
-[ext_resource type="Script" uid="uid://ca1311fn5lngq" path="res://addons/rubicon/scripts/scene/rubcion_level_clock.gd" id="2_hmr2h"]
+[ext_resource type="Script" uid="uid://ca1311fn5lngq" path="res://addons/rubicon/scripts/scene/rubicon_level_clock.gd" id="2_hmr2h"]
 [ext_resource type="AudioStream" uid="uid://c47s5rt0vjh0q" path="res://songs/test/resources/Inst.ogg" id="3_bqm08"]
 [ext_resource type="AudioStream" uid="uid://i1jw6ewumun6" path="res://songs/test/resources/Vocals.ogg" id="4_qwobi"]
-[ext_resource type="Script" uid="uid://3427qko7mm2v" path="res://addons/rubicon/scripts/scene/game/rubicon_level_note_controller.gd" id="5_kfswo"]
+[ext_resource type="Script" uid="uid://dpaagofnwlljw" path="res://addons/rubicon/scripts/scene/game/rubicon_level_note_controller.gd" id="5_kfswo"]
 [ext_resource type="Resource" uid="uid://bc3ph1v0630rv" path="res://songs/test/data/test_Opponent.tres" id="7_nnwp4"]
 [ext_resource type="Resource" uid="uid://d6amtbsbgbl2" path="res://addons/rubicon_mania/resources/default_note_database_overrides.tres" id="8_h6s6i"]
 [ext_resource type="PackedScene" uid="uid://328a2rb4wto0" path="res://addons/rubicon_mania/resources/skins/default/Lane.tscn" id="9_nnwp4"]

@@ -1,8 +1,17 @@
-[gd_resource type="Resource" script_class="RubiconLevelNoteDatabase" load_steps=3 format=3 uid="uid://bvhsfvptfwijt"]
+[gd_resource type="Resource" script_class="RubiconLevelNoteDatabase" load_steps=5 format=3 uid="uid://bvhsfvptfwijt"]
 
-[ext_resource type="Script" uid="uid://k56vr0phl8rj" path="res://addons/rubicon/scripts/data/game/rubicon_level_note_database_value.gd" id="1_ssml6"]
+[ext_resource type="Script" uid="uid://cqeah8oc5mldn" path="res://addons/rubicon/scripts/data/game/rubicon_level_note_metadata.gd" id="1_ssml6"]
 [ext_resource type="Script" uid="uid://4uiwwc60wpi3" path="res://addons/rubicon/scripts/data/game/rubicon_level_note_database.gd" id="2_c7mhy"]
+[ext_resource type="PackedScene" uid="uid://cip5k3yvg7ipe" path="res://addons/rubicon_mania/resources/skins/default/Note.tscn" id="2_d6ice"]
+
+[sub_resource type="Resource" id="Resource_b3jbw"]
+script = ExtResource("1_ssml6")
+scene = ExtResource("2_d6ice")
+metadata/_custom_type_script = "uid://cqeah8oc5mldn"
 
 [resource]
 script = ExtResource("2_c7mhy")
+defines = Dictionary[StringName, ExtResource("1_ssml6")]({
+&"mania": SubResource("Resource_b3jbw")
+})
 metadata/_custom_type_script = "uid://4uiwwc60wpi3"
