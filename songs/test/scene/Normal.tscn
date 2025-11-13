@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bte2jyircefco"]
+[gd_scene load_steps=15 format=3 uid="uid://bte2jyircefco"]
 
 [ext_resource type="Script" uid="uid://c7espnyhcgtth" path="res://addons/rubicon/scripts/scene/2d/rubicon_level_2d.gd" id="1_pgenk"]
 [ext_resource type="Resource" uid="uid://ovvjrs3mfgbs" path="res://songs/test/Meta.tres" id="2_3gogm"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://328a2rb4wto0" path="res://addons/rubicon_mania/resources/skins/default/Lane.tscn" id="9_nnwp4"]
 [ext_resource type="Resource" uid="uid://ndurlv0cfk5o" path="res://addons/rubicon_mania/resources/default_settings.tres" id="10_h6s6i"]
 [ext_resource type="Resource" uid="uid://bdtpofcdwsqwh" path="res://songs/test/data/test_Player.tres" id="11_h6s6i"]
+[ext_resource type="Resource" uid="uid://d3gd5egsmfwfp" path="res://addons/rubicon_mania/resources/default_input_map.tres" id="12_p2awp"]
 
 [sub_resource type="Animation" id="Animation_hmr2h"]
 resource_name = "scene"
@@ -64,6 +65,7 @@ metadata/_custom_type_script = "uid://ca1311fn5lngq"
 libraries = {
 &"": SubResource("AnimationLibrary_qunsj")
 }
+autoplay = "scene"
 
 [node name="Instrumental" type="AudioStreamPlayer" parent="."]
 
@@ -140,7 +142,7 @@ grow_vertical = 0
 script = ExtResource("5_kfswo")
 chart = ExtResource("11_h6s6i")
 note_overrides = ExtResource("8_h6s6i")
-autoplay = true
+inputs = ExtResource("12_p2awp")
 
 [node name="Lane" parent="UILayer/UI/Player" instance=ExtResource("9_nnwp4")]
 layout_mode = 1
