@@ -30,7 +30,7 @@ We like to keep Rubicon short in dependencies, all you really need is [Git](http
 
 After that, all you need to do is cloning this repository **recursively** as you'll need the submodules for the engine to work:
 ```
-git clone --recurse-submodule https://github.com
+git clone --recurse-submodule https://github.com/RubiconTeam/rubicon_fnf
 ```
 
 Although this repository is highly recommended to use Rubicon, its mostly a compilation of our engine's plugins. You can get the engine in its basic form by cloning the [Rubicon Addon](https://github.com/RubiconTeam/rubicon) and optionally but highly recommended, the [Mania Addon](https://github.com/RubiconTeam/rubicon_mania)
