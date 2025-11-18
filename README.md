@@ -22,11 +22,16 @@ This engine is currently being reformed, so unless you know what you're doing, t
 
 If you're developing on Rubicon, whether it's contributing to the engine or making your own fan-game, you should be aware that the way this engine handles tasks is nothing like how most other Friday Night Funkin' engines handle them, if the switch to Godot wasn't enough of an indicator.
 
-We plan to have an API Reference and a wiki to help developers better understand the engine more easily, so please bear with us! :pray:
+We plan to have a wiki to help developers better understand the engine more easily, so please bear with us! :pray:
 
-### Languages
-  
-We primarily work with GDScript for developing Rubicon Engine, though depending on if we can and want to, C# support could be possible.
+## Obtaining Rubicon
+
+We like to keep Rubicon short in dependencies, all you really need is [Git](https://git-scm.com) and [Godot](https://godotengine.org), preferably v4.5.1 but it will most likely work in similar versions.
+
+After that, all you really need to do is cloning this repository **recursively** as you'll need the submodules for the engine to work:
+```git clone --recurse-submodule https://github.com```
+
+Although this repository is highly recommended to use Rubicon, its mostly a compilation of our engine's plugins. You can get the engine in its basic form by cloning the [Rubicon Addon](https://github.com/RubiconTeam/rubicon) and optionally but highly recommended, the [Mania Addon](https://github.com/RubiconTeam/rubicon_mania)
 
 # Contributing
 
