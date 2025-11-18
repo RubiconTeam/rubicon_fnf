@@ -1,16 +1,14 @@
 # Rubicon
 
-A custom Godot Engine build integrating a unification of rhythm game elements, characters, and maps!
+A Godot project integrating a unification of rhythm game elements, characters, and levels!
 
-This engine is designed to be as robust and optimized as possible while still keeping the development workflow as smooth as possible towards developers looking forward to using this engine.
+This engine is designed to be robust and optimized while still keeping the development workflow as smooth as possible towards developers looking forward to using this engine.
 
 This repository is a sample project for Rubicon users to get started, using assets from the hit indie game [Friday Night Funkin'](https://github.com/FunkinCrew/Funkin).
 
 ## Links
 
 ### [Discord](https://discord.gg/HMDFMM3ffu)
-
-### [Trello](https://trello.com/b/s1utaWER/%E2%A8%82-rubicon-engine)
 
 # Status
 
