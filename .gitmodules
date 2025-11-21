@@ -13,3 +13,6 @@
 [submodule "addons/spriteframes_keyframer"]
 	path = addons/spriteframes_keyframer
 	url = https://github.com/anniebuue/spriteframes_keyframer.git
+[submodule "rubicon_animation_snapper"]
+	path = addons/rubicon_animation_snapper
+	url = https://github.com/RubiconTeam/rubicon_animation_snapper
