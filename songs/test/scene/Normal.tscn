@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bte2jyircefco"]
+[gd_scene load_steps=17 format=3 uid="uid://bte2jyircefco"]
 
 [ext_resource type="Script" uid="uid://c7espnyhcgtth" path="res://addons/rubicon/scripts/scene/2d/rubicon_level_2d.gd" id="1_pgenk"]
 [ext_resource type="Resource" uid="uid://ovvjrs3mfgbs" path="res://songs/test/Meta.tres" id="2_3gogm"]
@@ -8,11 +8,12 @@
 [ext_resource type="Script" uid="uid://dpaagofnwlljw" path="res://addons/rubicon/scripts/scene/game/rubicon_level_note_controller.gd" id="5_kfswo"]
 [ext_resource type="PackedScene" uid="uid://cssfk3u4d5q1x" path="res://addons/rubicon/resources/levels/characters/gigi_placeholder.tscn" id="7_lv1u2"]
 [ext_resource type="Resource" uid="uid://bc3ph1v0630rv" path="res://songs/test/data/test_Opponent.tres" id="7_nnwp4"]
+[ext_resource type="PackedScene" uid="uid://c6prfk6mwjxpe" path="res://resources/levels/characters/bf.tscn" id="7_ofykb"]
 [ext_resource type="Resource" uid="uid://d6amtbsbgbl2" path="res://addons/rubicon_mania/resources/default_note_database_overrides.tres" id="8_h6s6i"]
 [ext_resource type="PackedScene" uid="uid://328a2rb4wto0" path="res://addons/rubicon_mania/resources/skins/default/Lane.tscn" id="9_nnwp4"]
 [ext_resource type="Resource" uid="uid://bdtpofcdwsqwh" path="res://songs/test/data/test_Player.tres" id="11_h6s6i"]
 [ext_resource type="PackedScene" uid="uid://slgpuoq4ae8j" path="res://addons/rubicon/resources/levels/stages/stage_placeholder.tscn" id="12_lv1u2"]
-[ext_resource type="Resource" uid="uid://bg4f2fmft4d6r" path="res://addons/rubicon_mania/resources/default_input_map.tres" id="12_p2awp"]
+[ext_resource type="Resource" uid="uid://d3gd5egsmfwfp" path="res://addons/rubicon_mania/resources/default_input_map.tres" id="12_p2awp"]
 
 [sub_resource type="Animation" id="Animation_hmr2h"]
 resource_name = "scene"
@@ -76,19 +77,28 @@ position_smoothing_speed = 2.4
 
 [node name="StagePlaceholder" parent="." instance=ExtResource("12_lv1u2")]
 
-[node name="PlayerGigi" parent="StagePlaceholder" instance=ExtResource("7_lv1u2")]
+[node name="bf" parent="StagePlaceholder" node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_ofykb")]
+position = Vector2(1043, 813)
+level_note_controller = NodePath("../../UILayer/UI/Player")
+_camera_point = null
+_camera_point_offset = null
+
+[node name="PlayerGigi" parent="StagePlaceholder" node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_lv1u2")]
 position = Vector2(1400, 816)
-_note_controller_path = NodePath("../../UILayer/UI/Player")
-_note_controller = NodePath("../../UILayer/UI/Player")
+level_note_controller = NodePath("../../UILayer/UI/Player")
+_camera_point = null
+_camera_point_offset = null
 
 [node name="CameraPoint" type="Marker2D" parent="StagePlaceholder/PlayerGigi"]
 position = Vector2(-128, -278)
 
-[node name="OpponentGigi" parent="StagePlaceholder" instance=ExtResource("7_lv1u2")]
+[node name="OpponentGigi" parent="StagePlaceholder" node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_lv1u2")]
 position = Vector2(520, 815)
 scale = Vector2(-1, 1)
-_note_controller_path = NodePath("../../UILayer/UI/Opponent")
-_note_controller = NodePath("../../UILayer/UI/Opponent")
+hold_type = 2
+level_note_controller = NodePath("../../UILayer/UI/Opponent")
+_camera_point = null
+_camera_point_offset = null
 
 [node name="CameraPoint" type="Marker2D" parent="StagePlaceholder/OpponentGigi"]
 position = Vector2(-128, -278)
@@ -122,6 +132,8 @@ script = ExtResource("5_kfswo")
 chart = ExtResource("7_nnwp4")
 note_overrides = ExtResource("8_h6s6i")
 autoplay = true
+performance_score = 62015.50387596899
+performance_hits_perfect = 16
 
 [node name="Lane" parent="UILayer/UI/Opponent" instance=ExtResource("9_nnwp4")]
 layout_mode = 1
@@ -164,6 +176,8 @@ script = ExtResource("5_kfswo")
 chart = ExtResource("11_h6s6i")
 note_overrides = ExtResource("8_h6s6i")
 inputs = ExtResource("12_p2awp")
+performance_score = 54545.454545454544
+performance_hits_perfect = 12
 
 [node name="Lane" parent="UILayer/UI/Player" instance=ExtResource("9_nnwp4")]
 layout_mode = 1
