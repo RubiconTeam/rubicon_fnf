@@ -1,0 +1,109 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6prfk6mwjxpe"]
+
+[ext_resource type="Script" uid="uid://dqqqiv8d0q8gc" path="res://addons/rubicon/scripts/scene/2d/rubicon_simple_character_2d.gd" id="1_3fex7"]
+[ext_resource type="SpriteFrames" uid="uid://dyu2ogo4pge4g" path="res://assets/levels/characters/bf/boyfriend.res" id="2_p2yrx"]
+[ext_resource type="AnimationLibrary" uid="uid://x7r71ablmcko" path="res://assets/levels/characters/bf/boyfriend_library.tres" id="3_kuhqc"]
+
+[sub_resource type="Animation" id="Animation_f8b2p"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_ot660"]
+resource_name = "dance_idle"
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("boyfriend_library/BF idle dance"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_g2kf2"]
+resource_name = "sing_down"
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("boyfriend_library/BF NOTE DOWN"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_p2yrx"]
+resource_name = "sing_left"
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("boyfriend_library/BF NOTE LEFT"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_kuhqc"]
+resource_name = "sing_right"
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("boyfriend_library/BF NOTE RIGHT"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_hqu5c"]
+resource_name = "sing_up"
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("boyfriend_library/BF NOTE UP"),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g2kf2"]
+_data = {
+&"RESET": SubResource("Animation_f8b2p"),
+&"dance_idle": SubResource("Animation_ot660"),
+&"sing_down": SubResource("Animation_g2kf2"),
+&"sing_left": SubResource("Animation_p2yrx"),
+&"sing_right": SubResource("Animation_kuhqc"),
+&"sing_up": SubResource("Animation_hqu5c")
+}
+
+[node name="bf" type="Node2D" node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1_3fex7")
+animation_player = NodePath("RootAnimationPlayer")
+animations = Dictionary[StringName, StringName]({
+&"sing_down": &"sing_down",
+&"sing_left": &"sing_left",
+&"sing_right": &"sing_right",
+&"sing_up": &"sing_up"
+})
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -185)
+sprite_frames = ExtResource("2_p2yrx")
+animation = &"BF idle dance"
+frame = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+&"boyfriend_library": ExtResource("3_kuhqc")
+}
+
+[node name="RootAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_g2kf2")
+}
