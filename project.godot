@@ -8,12 +8,16 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Rubicon Engine: Friday Night Funkin'"
 run/main_scene="uid://bte2jyircefco"
-config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="uid://benm23nk1o2jb"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="uid://dlxowoyf4wnti"
 
 [display]
 
