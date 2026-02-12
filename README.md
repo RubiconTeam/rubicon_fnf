@@ -45,10 +45,11 @@ Rubicon Engine's code is licensed under the [Apache License, Version 2.0](https:
 
 # Credits
 ## Developers
-- [anniebuue](https://twitter.com/anniebuue)
-- [legole0](https://twitter.com/legole0)
+- [anniebuue](https://twitter.com/i/user/875471004365185024) - Main Developer
+- [legole0](https://twitter.com/i/user/3091959774) - Main Developer
 ## Contributors
-- [rivenpaws](https://e-z.bio/nullobjectreference)
+- [BeefStarchJello](https://twitter.com/i/user/1155441339246551043) - Made the logo
+- [DooDii](https://twitter.com/i/user/1373127588005224455) - Made the banner
 ## Special Credits
 - [firubii](https://github.com/firubii/) - HoloFunk note system and chart format (the base for Rubicon's note system and chart format)
 - [cherrythecool](https://github.com/cherrythecool) - [GDAnimate](https://github.com/cherrythecool/gdanimate)
