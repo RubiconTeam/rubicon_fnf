@@ -18,6 +18,16 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-6, 25)]
 }
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("boyfriend_library/BF idle dance"),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_ot660"]
 resource_name = "dance_idle"
@@ -156,8 +166,11 @@ _data = {
 
 [node name="bf" type="Node2D" unique_id=657420159 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_3fex7")
-hold_type = 3
 animation_player = NodePath("RootAnimationPlayer")
+animation_steps_until_dance = 8
+animation_hold_type = 2
+animation_repeat_loop_point = null
+animation_step_time_value = null
 animations = Dictionary[StringName, StringName]({
 &"sing_down": &"sing_down",
 &"sing_left": &"sing_left",
@@ -168,8 +181,7 @@ animations = Dictionary[StringName, StringName]({
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=450672484]
 position = Vector2(-1, -185)
 sprite_frames = ExtResource("2_p2yrx")
-animation = &"BF NOTE DOWN"
-frame = 2
+animation = &"BF idle dance"
 offset = Vector2(-6, 25)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D" unique_id=1434751617]

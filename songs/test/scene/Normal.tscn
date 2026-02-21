@@ -92,15 +92,17 @@ position_smoothing_speed = 2.4
 [node name="Bf" parent="StagePlaceholder" unique_id=32254497 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_ofykb")]
 position = Vector2(1247, 806)
 level_note_controller = NodePath("../../UILayer/UI/Player")
-state = 0
+animation_repeat_loop_point = 0.125
+animation_step_time_value = 1.0
+state = 2
 
 [node name="BfOpponent" parent="StagePlaceholder" unique_id=753393350 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_ofykb")]
 position = Vector2(741, 810)
 rotation = -3.1415927
 scale = Vector2(1, -1)
 level_note_controller = NodePath("../../UILayer/UI/Opponent")
-should_dance = false
-hold_type = 0
+animation_repeat_loop_point = 0.125
+animation_step_time_value = 1.0
 state = 2
 animations = Dictionary[StringName, StringName]({
 &"sing_down": &"sing_down",
@@ -112,15 +114,14 @@ animations = Dictionary[StringName, StringName]({
 [node name="PlayerGigi" parent="StagePlaceholder" unique_id=289645069 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_lv1u2")]
 position = Vector2(1567, 825)
 level_note_controller = NodePath("../../UILayer/UI/Player")
-should_dance = false
+animation_hold_type = 1
 state = 2
 
 [node name="OpponentGigi" parent="StagePlaceholder" unique_id=1827277634 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_lv1u2")]
 position = Vector2(373, 826)
 scale = Vector2(-1, 1)
 level_note_controller = NodePath("../../UILayer/UI/Opponent")
-should_dance = false
-hold_type = 2
+animation_hold_type = 1
 state = 2
 
 [node name="Instrumental" type="AudioStreamPlayer" parent="." unique_id=594523549]
