@@ -92,18 +92,14 @@ position_smoothing_speed = 2.4
 [node name="Bf" parent="StagePlaceholder" unique_id=32254497 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_ofykb")]
 position = Vector2(1247, 806)
 level_note_controller = NodePath("../../UILayer/UI/Player")
-animation_repeat_loop_point = 0.125
-animation_step_time_value = 1.0
-state = 2
+state = 0
 
 [node name="BfOpponent" parent="StagePlaceholder" unique_id=753393350 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_ofykb")]
 position = Vector2(741, 810)
 rotation = -3.1415927
 scale = Vector2(1, -1)
 level_note_controller = NodePath("../../UILayer/UI/Opponent")
-animation_repeat_loop_point = 0.125
-animation_step_time_value = 1.0
-state = 2
+state = 0
 animations = Dictionary[StringName, StringName]({
 &"sing_down": &"sing_down",
 &"sing_left": &"sing_right",
@@ -115,14 +111,14 @@ animations = Dictionary[StringName, StringName]({
 position = Vector2(1567, 825)
 level_note_controller = NodePath("../../UILayer/UI/Player")
 animation_hold_type = 1
-state = 2
+state = 0
 
 [node name="OpponentGigi" parent="StagePlaceholder" unique_id=1827277634 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_lv1u2")]
 position = Vector2(373, 826)
 scale = Vector2(-1, 1)
 level_note_controller = NodePath("../../UILayer/UI/Opponent")
 animation_hold_type = 1
-state = 2
+state = 0
 
 [node name="Instrumental" type="AudioStreamPlayer" parent="." unique_id=594523549]
 volume_db = -13.117
@@ -163,7 +159,6 @@ level_note_controller = NodePath("../Player")
 [node name="HealthBar" parent="UILayer/UI" unique_id=2000574413 node_paths=PackedStringArray("health_module") instance=ExtResource("13_gjc7t")]
 layout_mode = 1
 grow_horizontal = 1
-value = 100.0
 health_module = NodePath("../../../RubiconHealthModule")
 
 [node name="Opponent" type="Control" parent="UILayer/UI" unique_id=1414679961]
@@ -249,5 +244,3 @@ offset_left = 240.0
 offset_right = 240.0
 global_direction = -1.571
 lane_id = 3
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1328036937]
