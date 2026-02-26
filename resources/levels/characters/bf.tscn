@@ -31,6 +31,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_ot660"]
 resource_name = "dance_idle"
+length = 0.6
 tracks/0/type = "animation"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -56,6 +57,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_g2kf2"]
 resource_name = "sing_down"
+length = 0.6
 tracks/0/type = "animation"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -81,6 +83,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_p2yrx"]
 resource_name = "sing_left"
+length = 0.6
 tracks/0/type = "animation"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -106,6 +109,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_kuhqc"]
 resource_name = "sing_right"
+length = 0.6
 tracks/0/type = "animation"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -131,6 +135,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_hqu5c"]
 resource_name = "sing_up"
+length = 0.6
 tracks/0/type = "animation"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -167,10 +172,7 @@ _data = {
 [node name="bf" type="Node2D" unique_id=657420159 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_3fex7")
 animation_player = NodePath("RootAnimationPlayer")
-animation_steps_until_dance = 8
 animation_hold_type = 2
-animation_repeat_loop_point = null
-animation_step_time_value = null
 animations = Dictionary[StringName, StringName]({
 &"sing_down": &"sing_down",
 &"sing_left": &"sing_left",
@@ -189,3 +191,4 @@ libraries/boyfriend_library = ExtResource("3_kuhqc")
 
 [node name="RootAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1612954901]
 libraries/ = SubResource("AnimationLibrary_g2kf2")
+autoplay = &"dance_idle"
