@@ -51,5 +51,5 @@ Rubicon Engine's code is licensed under the [Apache License, Version 2.0](https:
 - [BeefStarchJello](https://twitter.com/i/user/1155441339246551043) - Made the logo
 - [DooDii](https://twitter.com/i/user/1373127588005224455) - Made the banner
 ## Special Credits
-- [firubii](https://github.com/firubii/) - HoloFunk note system and chart format (the base for Rubicon's note system and chart format)
+- [firubii](https://github.com/firubii/) - Note system derived from Fantasy Engine ([HoloFunk](https://gamejolt.com/games/holofunk/754195))
 - [cherrythecool](https://github.com/cherrythecool) - [GDAnimate](https://github.com/cherrythecool/gdanimate)
