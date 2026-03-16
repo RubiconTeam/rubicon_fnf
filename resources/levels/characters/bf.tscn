@@ -10,7 +10,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("AnimatedSprite2D:offset")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
@@ -172,13 +172,14 @@ _data = {
 [node name="bf" type="Node2D" unique_id=657420159 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_3fex7")
 animation_player = NodePath("RootAnimationPlayer")
-animation_hold_type = 2
+dancing_animations = Array[StringName]([&"dance_idle"])
 animations = Dictionary[StringName, StringName]({
 &"sing_down": &"sing_down",
 &"sing_left": &"sing_left",
 &"sing_right": &"sing_right",
 &"sing_up": &"sing_up"
 })
+dancing_animations = Array[StringName]([&"dance_idle"])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=450672484]
 position = Vector2(-1, -185)
