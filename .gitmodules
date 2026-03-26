@@ -16,3 +16,6 @@
 [submodule "rubicon_animation_snapper"]
 	path = addons/rubicon_animation_snapper
 	url = https://github.com/RubiconTeam/rubicon_animation_snapper
+[submodule "rubicon_interpolated_camera"]
+	path = addons/rubicon_interpolated_camera
+	url = https://github.com/RubiconTeam/rubicon_interpolated_camera/
