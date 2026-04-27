@@ -179,6 +179,9 @@ animations = Dictionary[StringName, StringName]({
 &"sing_right": &"sing_right",
 &"sing_up": &"sing_up"
 })
+mania_anim_groups = Dictionary[StringName, int]({
+&"sing": 4
+})
 dancing_animations = Array[StringName]([&"dance_idle"])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=450672484]

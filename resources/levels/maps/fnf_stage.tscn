@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://do2qvv4wl764d"]
+
+[ext_resource type="Texture2D" uid="uid://do4hqbniubfd" path="res://assets/levels/maps/stage/stageback.png" id="1_dpu8f"]
+[ext_resource type="Texture2D" uid="uid://b0av8i2jom5uh" path="res://assets/levels/maps/stage/stagefront.png" id="2_vtwsf"]
+[ext_resource type="Texture2D" uid="uid://i861wuf0qc2t" path="res://assets/levels/maps/stage/stage_light.png" id="3_jqx78"]
+[ext_resource type="Texture2D" uid="uid://ctvwosp41362x" path="res://assets/levels/maps/stage/stagecurtains.png" id="4_nuyjm"]
+
+[node name="FnfStage" type="Node2D" unique_id=52964114]
+
+[node name="Stageback" type="Sprite2D" parent="." unique_id=1519633348]
+z_index = -1
+position = Vector2(1001, 562)
+texture = ExtResource("1_dpu8f")
+
+[node name="Stagefront" type="Sprite2D" parent="." unique_id=271261012]
+z_index = -1
+position = Vector2(999, 970)
+texture = ExtResource("2_vtwsf")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=656390871]
+scroll_scale = Vector2(1.085, 1)
+scroll_offset = Vector2(57, -8)
+
+[node name="StageLight" type="Sprite2D" parent="Parallax2D" unique_id=22038575]
+position = Vector2(259, 199.81)
+texture = ExtResource("3_jqx78")
+
+[node name="StageLight2" type="Sprite2D" parent="Parallax2D" unique_id=1116111910]
+position = Vector2(1591, 199.81)
+texture = ExtResource("3_jqx78")
+flip_h = true
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=966079506]
+scroll_scale = Vector2(1.1, 1.1)
+scroll_offset = Vector2(57, -8)
+
+[node name="Stagecurtains" type="Sprite2D" parent="Parallax2D2" unique_id=1577624650]
+z_index = 1
+position = Vector2(934, 579)
+texture = ExtResource("4_nuyjm")
