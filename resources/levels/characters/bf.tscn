@@ -14,9 +14,9 @@ tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(0),
 "update": 0,
-"values": [Vector2(-6, 25)]
+"values": [Vector2(0, 0)]
 }
 tracks/1/type = "animation"
 tracks/1/imported = false
@@ -53,6 +53,110 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(0),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d6exh"]
+resource_name = "miss_down"
+length = 0.6
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("boyfriend_library/BF NOTE DOWN MISS"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(-4, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_yeq8c"]
+resource_name = "miss_left"
+length = 0.6
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("boyfriend_library/BF NOTE LEFT MISS"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(-22, -9)]
+}
+
+[sub_resource type="Animation" id="Animation_7jiql"]
+resource_name = "miss_right"
+length = 0.6
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("boyfriend_library/BF NOTE RIGHT MISS"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(42, -8)]
+}
+
+[sub_resource type="Animation" id="Animation_hbi3v"]
+resource_name = "miss_up"
+length = 0.6
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("boyfriend_library/BF NOTE UP MISS"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0),
+"update": 0,
+"values": [Vector2(21, -6)]
 }
 
 [sub_resource type="Animation" id="Animation_g2kf2"]
@@ -163,6 +267,10 @@ tracks/1/keys = {
 _data = {
 &"RESET": SubResource("Animation_f8b2p"),
 &"dance_idle": SubResource("Animation_ot660"),
+&"miss_down": SubResource("Animation_d6exh"),
+&"miss_left": SubResource("Animation_yeq8c"),
+&"miss_right": SubResource("Animation_7jiql"),
+&"miss_up": SubResource("Animation_hbi3v"),
 &"sing_down": SubResource("Animation_g2kf2"),
 &"sing_left": SubResource("Animation_p2yrx"),
 &"sing_right": SubResource("Animation_kuhqc"),
@@ -172,8 +280,13 @@ _data = {
 [node name="bf" type="Node2D" unique_id=657420159 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_3fex7")
 animation_player = NodePath("RootAnimationPlayer")
+singing_hold_type = 3
 dancing_animations = Array[StringName]([&"dance_idle"])
 animations = Dictionary[StringName, StringName]({
+&"miss_down": &"miss_down",
+&"miss_left": &"miss_left",
+&"miss_right": &"miss_right",
+&"miss_up": &"miss_up",
 &"sing_down": &"sing_down",
 &"sing_left": &"sing_left",
 &"sing_right": &"sing_right",
@@ -188,7 +301,6 @@ dancing_animations = Array[StringName]([&"dance_idle"])
 position = Vector2(-1, -185)
 sprite_frames = ExtResource("2_p2yrx")
 animation = &"BF idle dance"
-offset = Vector2(-6, 25)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D" unique_id=1434751617]
 libraries/boyfriend_library = ExtResource("3_kuhqc")
