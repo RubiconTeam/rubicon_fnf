@@ -20,7 +20,7 @@
 [ext_resource type="Resource" uid="uid://x5y6hbeus00a" path="res://songs/test/data/test_Opponent.tres" id="18_x8f7e"]
 [ext_resource type="PackedScene" uid="uid://cnjbaigs5x5hs" path="res://resources/levels/ui/funkin/mania/Lane.tscn" id="20_y6wax"]
 [ext_resource type="PackedScene" uid="uid://c582dds6i66py" path="res://resources/levels/ui/funkin/mania/Note.tscn" id="21_0ktul"]
-[ext_resource type="Resource" uid="uid://b248dinmb0vlb" path="res://assets/levels/ui/funkin/funkin_note_override.tres" id="22_0ktul"]
+[ext_resource type="Resource" uid="uid://b248dinmb0vlb" path="res://resources/levels/ui/funkin/funkin_note_override.tres" id="22_0ktul"]
 [ext_resource type="Resource" uid="uid://csifqf5pyurw8" path="res://songs/test/data/test_Player.tres" id="22_7o1jy"]
 [ext_resource type="Resource" uid="uid://d3gd5egsmfwfp" path="res://addons/rubicon_mania/resources/default_input_map.tres" id="23_lseq1"]
 
@@ -134,12 +134,12 @@ scale = Vector2(1, -1)
 position = Vector2(785, 625)
 
 [node name="RubiconInterpolatedCamera2D" type="Camera2D" parent="." unique_id=149236068]
-position = Vector2(1225.9998, 624.99994)
-rotation = 3.1415918
-zoom = Vector2(1.3366488, 1.3366488)
+position = Vector2(785.06354, 624.99994)
+rotation = 0.0004519793
+zoom = Vector2(1.3366516, 1.3366516)
 script = ExtResource("11_thb4w")
 position_interpolate_target = Vector2(785, 625)
-zoom_interpolate_target = Vector2(1.3366487, 1.3366487)
+zoom_interpolate_target = Vector2(1.3366488, 1.3366488)
 metadata/_custom_type_script = "uid://bk8alxtg2qxnl"
 
 [node name="RubiconPositionSetter" type="Node" parent="RubiconInterpolatedCamera2D" unique_id=960588257 node_paths=PackedStringArray("point_map")]
@@ -180,7 +180,6 @@ level_note_controller = NodePath("../Player")
 [node name="HealthBar" parent="UILayer/UI" unique_id=2000574413 node_paths=PackedStringArray("health_module") instance=ExtResource("16_w8peo")]
 layout_mode = 1
 grow_horizontal = 1
-value = 100.0
 health_module = NodePath("../../../RubiconHealthModule")
 
 [node name="Opponent" type="Control" parent="UILayer/UI" unique_id=1414679961]
