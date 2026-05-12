@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RubiconLevelNoteDatabase" format=3 uid="uid://b248dinmb0vlb"]
+
+[ext_resource type="Script" uid="uid://cqeah8oc5mldn" path="res://addons/rubicon/scripts/data/game/rubicon_level_note_metadata.gd" id="1_sifow"]
+[ext_resource type="PackedScene" uid="uid://c582dds6i66py" path="res://resources/levels/ui/funkin/mania/Note.tscn" id="2_w87g5"]
+[ext_resource type="Script" uid="uid://4uiwwc60wpi3" path="res://addons/rubicon/scripts/data/game/rubicon_level_note_database.gd" id="3_g3ba5"]
+
+[sub_resource type="Resource" id="Resource_b3jbw"]
+script = ExtResource("1_sifow")
+scene = ExtResource("2_w87g5")
+metadata/_custom_type_script = "uid://cqeah8oc5mldn"
+
+[resource]
+script = ExtResource("3_g3ba5")
+defines = Dictionary[StringName, ExtResource("1_sifow")]({
+&"mania": SubResource("Resource_b3jbw")
+})
+metadata/_custom_type_script = "uid://4uiwwc60wpi3"

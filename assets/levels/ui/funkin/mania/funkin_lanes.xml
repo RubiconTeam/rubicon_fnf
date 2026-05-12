@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="funkinLane.png">
+	<SubTexture name="down_lane_confirm0000" x="2" y="2" width="238" height="234"/>
+	<SubTexture name="down_lane_confirm0001" x="242" y="2" width="238" height="234"/>
+	<SubTexture name="down_lane_confirm0002" x="482" y="2" width="238" height="234"/>
+	<SubTexture name="down_lane_confirm0003" x="482" y="2" width="238" height="234"/>
+	<SubTexture name="down_lane_neutral0000" x="232" y="703" width="157" height="154"/>
+	<SubTexture name="down_lane_press0000" x="152" y="859" width="149" height="146"/>
+	<SubTexture name="down_lane_press0001" x="152" y="859" width="149" height="146"/>
+	<SubTexture name="down_lane_press0002" x="703" y="859" width="149" height="146"/>
+	<SubTexture name="down_lane_press0003" x="703" y="859" width="149" height="146"/>
+	<SubTexture name="left_lane_confirm0000" x="239" y="238" width="228" height="231"/>
+	<SubTexture name="left_lane_confirm0001" x="469" y="238" width="228" height="231"/>
+	<SubTexture name="left_lane_confirm0002" x="699" y="470" width="228" height="231"/>
+	<SubTexture name="left_lane_confirm0003" x="699" y="470" width="228" height="231"/>
+	<SubTexture name="left_lane_neutral0000" x="391" y="703" width="154" height="157"/>
+	<SubTexture name="left_lane_press0000" x="303" y="862" width="146" height="149"/>
+	<SubTexture name="left_lane_press0001" x="303" y="862" width="146" height="149"/>
+	<SubTexture name="left_lane_press0002" x="451" y="862" width="146" height="149"/>
+	<SubTexture name="left_lane_press0003" x="451" y="862" width="146" height="149"/>
+	<SubTexture name="right_lane_confirm0000" x="239" y="471" width="228" height="230"/>
+	<SubTexture name="right_lane_confirm0001" x="469" y="471" width="228" height="230"/>
+	<SubTexture name="right_lane_confirm0002" x="2" y="472" width="228" height="230"/>
+	<SubTexture name="right_lane_confirm0003" x="2" y="472" width="228" height="230"/>
+	<SubTexture name="right_lane_neutral0000" x="547" y="703" width="154" height="157"/>
+	<SubTexture name="right_lane_press0000" x="862" y="855" width="148" height="151"/>
+	<SubTexture name="right_lane_press0001" x="862" y="855" width="148" height="151"/>
+	<SubTexture name="right_lane_press0002" x="2" y="856" width="148" height="151"/>
+	<SubTexture name="right_lane_press0003" x="2" y="856" width="148" height="151"/>
+	<SubTexture name="up_lane_confirm0000" x="722" y="2" width="235" height="232"/>
+	<SubTexture name="up_lane_confirm0001" x="722" y="236" width="235" height="232"/>
+	<SubTexture name="up_lane_confirm0002" x="2" y="238" width="235" height="232"/>
+	<SubTexture name="up_lane_confirm0003" x="2" y="238" width="235" height="232"/>
+	<SubTexture name="up_lane_neutral0000" x="703" y="703" width="157" height="154"/>
+	<SubTexture name="up_lane_press0000" x="862" y="703" width="153" height="150"/>
+	<SubTexture name="up_lane_press0001" x="862" y="703" width="153" height="150"/>
+	<SubTexture name="up_lane_press0002" x="2" y="704" width="153" height="150"/>
+	<SubTexture name="up_lane_press0003" x="2" y="704" width="153" height="150"/>
+</TextureAtlas>
