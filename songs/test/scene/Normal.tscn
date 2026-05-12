@@ -134,13 +134,19 @@ volume_db = -13.117
 [node name="Bf" parent="Stage" unique_id=32254497 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_ofykb")]
 position = Vector2(1388, 869)
 level_note_controller = NodePath("../../UILayer/UI/Player")
+singing_step_time_value = 0.5
 
 [node name="BfOpponent" parent="Stage" unique_id=753393350 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("7_ofykb")]
 position = Vector2(617, 869)
 rotation = 3.1415925
 scale = Vector2(1, -1)
 level_note_controller = NodePath("../../UILayer/UI/Opponent")
+singing_step_time_value = 0.5
 animations = Dictionary[StringName, StringName]({
+&"miss_down": &"sing_down",
+&"miss_left": &"miss_right",
+&"miss_right": &"miss_left",
+&"miss_up": &"sing_up",
 &"sing_down": &"sing_down",
 &"sing_left": &"sing_right",
 &"sing_right": &"sing_left",
@@ -158,11 +164,11 @@ position = Vector2(785, 625)
 [node name="RubiconInterpolatedCamera2D" type="Camera2D" parent="." unique_id=149236068]
 position = Vector2(1225.9999, 624.99994)
 rotation = 3.1415923
-zoom = Vector2(1.2097846, 1.2097846)
+zoom = Vector2(1.2500001, 1.2500001)
 script = ExtResource("9_r7j1c")
 position_interpolate_target = Vector2(1226, 625)
 rotation_interpolate_target = 3.1415925
-zoom_interpolate_target = Vector2(1.2097514, 1.2097514)
+zoom_interpolate_target = Vector2(1.25, 1.25)
 metadata/_custom_type_script = "uid://bk8alxtg2qxnl"
 
 [node name="RubiconPositionSetter" type="Node" parent="RubiconInterpolatedCamera2D" unique_id=960588257 node_paths=PackedStringArray("point_map")]
@@ -203,7 +209,6 @@ level_note_controller = NodePath("../Player")
 [node name="HealthBar" parent="UILayer/UI" unique_id=2000574413 node_paths=PackedStringArray("health_module") instance=ExtResource("13_gjc7t")]
 layout_mode = 1
 grow_horizontal = 1
-value = 100.0
 health_module = NodePath("../../../RubiconHealthModule")
 
 [node name="Opponent" type="Control" parent="UILayer/UI" unique_id=1414679961]
@@ -227,11 +232,26 @@ offset_left = -240.0
 offset_right = -240.0
 global_direction = -1.571
 
+[node name="Note 0" parent="UILayer/UI/Opponent/Lane" unique_id=425197780 instance=ExtResource("18_r7j1c")]
+layout_mode = 1
+offset_left = -2.607017
+offset_top = -12800.0
+offset_right = -2.607017
+offset_bottom = -12800.0
+
 [node name="Lane2" parent="UILayer/UI/Opponent" unique_id=532140058 instance=ExtResource("9_nnwp4")]
 layout_mode = 1
 offset_left = -80.0
 offset_right = -80.0
 global_direction = -1.571
+lane_id = 1
+
+[node name="Note 0" parent="UILayer/UI/Opponent/Lane2" unique_id=740258944 instance=ExtResource("18_r7j1c")]
+layout_mode = 1
+offset_left = -2.6884863
+offset_top = -13200.0
+offset_right = -2.6884863
+offset_bottom = -13200.0
 lane_id = 1
 
 [node name="Lane3" parent="UILayer/UI/Opponent" unique_id=906114964 instance=ExtResource("9_nnwp4")]
@@ -241,6 +261,14 @@ offset_right = 80.0
 global_direction = -1.571
 lane_id = 2
 
+[node name="Note 0" parent="UILayer/UI/Opponent/Lane3" unique_id=855174508 instance=ExtResource("18_r7j1c")]
+layout_mode = 1
+offset_left = -2.7699556
+offset_top = -13600.0
+offset_right = -2.7699556
+offset_bottom = -13600.0
+lane_id = 2
+
 [node name="Lane4" parent="UILayer/UI/Opponent" unique_id=2006533611 instance=ExtResource("9_nnwp4")]
 layout_mode = 1
 offset_left = 240.0
@@ -248,7 +276,7 @@ offset_right = 240.0
 global_direction = -1.571
 lane_id = 3
 
-[node name="Note 0" parent="UILayer/UI/Opponent/Lane4" unique_id=1043821550 instance=ExtResource("18_r7j1c")]
+[node name="Note 0" parent="UILayer/UI/Opponent/Lane4" unique_id=1017373653 instance=ExtResource("18_r7j1c")]
 layout_mode = 1
 offset_left = -2.851425
 offset_top = -14000.0
@@ -269,6 +297,7 @@ grow_vertical = 0
 script = ExtResource("5_kfswo")
 chart = ExtResource("11_h6s6i")
 note_overrides = ExtResource("8_h6s6i")
+preview_as_autoplay = false
 inputs = ExtResource("12_p2awp")
 
 [node name="Lane" parent="UILayer/UI/Player" unique_id=1638074542 instance=ExtResource("9_nnwp4")]
@@ -276,8 +305,9 @@ layout_mode = 1
 offset_left = -240.0
 offset_right = -240.0
 global_direction = -1.571
+lane_state = 2
 
-[node name="Note 0" parent="UILayer/UI/Player/Lane" unique_id=1500233412 instance=ExtResource("18_r7j1c")]
+[node name="Note 0" parent="UILayer/UI/Player/Lane" unique_id=427530278 instance=ExtResource("18_r7j1c")]
 layout_mode = 1
 offset_left = -2.9328942
 offset_top = -14400.0
@@ -291,7 +321,7 @@ offset_right = -80.0
 global_direction = -1.571
 lane_id = 1
 
-[node name="Note 0" parent="UILayer/UI/Player/Lane2" unique_id=1164020038 instance=ExtResource("18_r7j1c")]
+[node name="Note 0" parent="UILayer/UI/Player/Lane2" unique_id=1922104317 instance=ExtResource("18_r7j1c")]
 layout_mode = 1
 offset_left = -3.0143635
 offset_top = -14800.0
@@ -306,7 +336,7 @@ offset_right = 80.0
 global_direction = -1.571
 lane_id = 2
 
-[node name="Note 0" parent="UILayer/UI/Player/Lane3" unique_id=1833248514 instance=ExtResource("18_r7j1c")]
+[node name="Note 0" parent="UILayer/UI/Player/Lane3" unique_id=2081616770 instance=ExtResource("18_r7j1c")]
 layout_mode = 1
 offset_left = -3.0958326
 offset_top = -15200.0
@@ -321,7 +351,7 @@ offset_right = 240.0
 global_direction = -1.571
 lane_id = 3
 
-[node name="Note 0" parent="UILayer/UI/Player/Lane4" unique_id=2081568346 instance=ExtResource("18_r7j1c")]
+[node name="Note 0" parent="UILayer/UI/Player/Lane4" unique_id=1400474817 instance=ExtResource("18_r7j1c")]
 layout_mode = 1
 offset_left = -3.177302
 offset_top = -15600.0
