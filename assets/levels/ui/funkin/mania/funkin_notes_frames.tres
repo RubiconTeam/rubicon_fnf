@@ -68,7 +68,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_im1ib")
 }],
-"loop": false,
+"loop": 0,
 "name": &"down_note_hold",
 "speed": 24.0
 }, {
@@ -76,7 +76,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ke1p1")
 }],
-"loop": false,
+"loop": 0,
 "name": &"down_note_neutral",
 "speed": 24.0
 }, {
@@ -84,7 +84,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a7nes")
 }],
-"loop": false,
+"loop": 0,
 "name": &"down_note_tail",
 "speed": 24.0
 }, {
@@ -92,7 +92,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_80me7")
 }],
-"loop": false,
+"loop": 0,
 "name": &"left_note_hold",
 "speed": 24.0
 }, {
@@ -100,7 +100,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jxyg3")
 }],
-"loop": false,
+"loop": 0,
 "name": &"left_note_neutral",
 "speed": 24.0
 }, {
@@ -108,7 +108,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b3xyi")
 }],
-"loop": false,
+"loop": 0,
 "name": &"left_note_tail",
 "speed": 24.0
 }, {
@@ -116,7 +116,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ifj6i")
 }],
-"loop": false,
+"loop": 0,
 "name": &"right_note_hold",
 "speed": 24.0
 }, {
@@ -124,7 +124,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1q5rt")
 }],
-"loop": false,
+"loop": 0,
 "name": &"right_note_neutral",
 "speed": 24.0
 }, {
@@ -132,7 +132,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tykmu")
 }],
-"loop": false,
+"loop": 0,
 "name": &"right_note_tail",
 "speed": 24.0
 }, {
@@ -140,7 +140,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vr5dl")
 }],
-"loop": false,
+"loop": 0,
 "name": &"up_note_hold",
 "speed": 24.0
 }, {
@@ -148,7 +148,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p0x4x")
 }],
-"loop": false,
+"loop": 0,
 "name": &"up_note_neutral",
 "speed": 24.0
 }, {
@@ -156,7 +156,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gblel")
 }],
-"loop": false,
+"loop": 0,
 "name": &"up_note_tail",
 "speed": 24.0
 }]

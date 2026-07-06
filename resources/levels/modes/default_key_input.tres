@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="RubiconLevelNoteInputMap" load_steps=6 format=3 uid="uid://dilfjc4b000r2"]
+[gd_resource type="Resource" script_class="RubiconLevelNoteInputMap" format=3 uid="uid://dilfjc4b000r2"]
 
 [ext_resource type="Script" uid="uid://6r0nse0ex5v5" path="res://addons/rubicon/scripts/data/game/rubicon_level_note_input_map.gd" id="1_bysp7"]
 
@@ -24,10 +24,10 @@ unicode = 107
 
 [resource]
 script = ExtResource("1_bysp7")
-inputs = Dictionary[InputEvent, String]({
-SubResource("InputEventKey_bysp7"): "mania_0",
-SubResource("InputEventKey_s3oh3"): "mania_1",
-SubResource("InputEventKey_5gk62"): "mania_2",
-SubResource("InputEventKey_e8uhr"): "mania_3"
+inputs = Dictionary[InputEvent, StringName]({
+SubResource("InputEventKey_bysp7"): &"mania_0",
+SubResource("InputEventKey_s3oh3"): &"mania_1",
+SubResource("InputEventKey_5gk62"): &"mania_2",
+SubResource("InputEventKey_e8uhr"): &"mania_3"
 })
 metadata/_custom_type_script = "uid://6r0nse0ex5v5"

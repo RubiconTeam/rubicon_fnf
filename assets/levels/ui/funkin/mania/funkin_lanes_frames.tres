@@ -137,7 +137,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pp6p5")
 }],
-"loop": false,
+"loop": 0,
 "name": &"down_lane_confirm",
 "speed": 24.0
 }, {
@@ -145,7 +145,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_abedp")
 }],
-"loop": false,
+"loop": 0,
 "name": &"down_lane_neutral",
 "speed": 24.0
 }, {
@@ -162,7 +162,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ryq6e")
 }],
-"loop": false,
+"loop": 0,
 "name": &"down_lane_press",
 "speed": 24.0
 }, {
@@ -179,7 +179,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0hmk6")
 }],
-"loop": false,
+"loop": 0,
 "name": &"left_lane_confirm",
 "speed": 24.0
 }, {
@@ -187,7 +187,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4ubmj")
 }],
-"loop": false,
+"loop": 0,
 "name": &"left_lane_neutral",
 "speed": 24.0
 }, {
@@ -204,7 +204,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_77y0k")
 }],
-"loop": false,
+"loop": 0,
 "name": &"left_lane_press",
 "speed": 24.0
 }, {
@@ -221,7 +221,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8ljjv")
 }],
-"loop": false,
+"loop": 0,
 "name": &"right_lane_confirm",
 "speed": 24.0
 }, {
@@ -229,7 +229,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_edk5a")
 }],
-"loop": false,
+"loop": 0,
 "name": &"right_lane_neutral",
 "speed": 24.0
 }, {
@@ -246,7 +246,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lk2o1")
 }],
-"loop": false,
+"loop": 0,
 "name": &"right_lane_press",
 "speed": 24.0
 }, {
@@ -263,7 +263,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_28rao")
 }],
-"loop": false,
+"loop": 0,
 "name": &"up_lane_confirm",
 "speed": 24.0
 }, {
@@ -271,7 +271,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_enso8")
 }],
-"loop": false,
+"loop": 0,
 "name": &"up_lane_neutral",
 "speed": 24.0
 }, {
@@ -288,7 +288,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nhvh0")
 }],
-"loop": false,
+"loop": 0,
 "name": &"up_lane_press",
 "speed": 24.0
 }]

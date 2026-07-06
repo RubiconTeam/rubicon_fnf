@@ -257,7 +257,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g5swc")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_dance_idle",
 "speed": 24.0
 }, {
@@ -271,7 +271,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ma43u")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_dodge_loop",
 "speed": 24.0
 }, {
@@ -282,7 +282,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t1bc2")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_dodge_start",
 "speed": 24.0
 }, {
@@ -302,7 +302,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_73abw")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_hey",
 "speed": 24.0
 }, {
@@ -316,7 +316,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5yisa")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_note_down",
 "speed": 24.0
 }, {
@@ -333,7 +333,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ux3s1")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_note_down_miss",
 "speed": 24.0
 }, {
@@ -347,7 +347,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8f8ir")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_note_left",
 "speed": 24.0
 }, {
@@ -364,7 +364,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_onokk")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_note_left_miss",
 "speed": 24.0
 }, {
@@ -378,7 +378,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v5na2")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_note_right",
 "speed": 24.0
 }, {
@@ -395,7 +395,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dkpgm")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_note_right_miss",
 "speed": 24.0
 }, {
@@ -409,7 +409,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jllk8")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_note_up",
 "speed": 24.0
 }, {
@@ -426,7 +426,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gewgc")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_note_up_miss",
 "speed": 24.0
 }, {
@@ -443,7 +443,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ky3y4")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bf_shaking_idle",
 "speed": 24.0
 }]

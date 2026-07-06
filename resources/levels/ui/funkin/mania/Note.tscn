@@ -816,7 +816,7 @@ pivot_offset = Vector2(0, 75)
 [node name="Graphic" type="AnimatedSprite2D" parent="Container/Sprite" unique_id=901087157]
 position = Vector2(0, 75)
 sprite_frames = ExtResource("3_tkgvx")
-animation = &"up_note_neutral"
+animation = &"left_note_neutral"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Container/Sprite/Graphic" unique_id=1219401972]
 libraries/funkin_notes_library = ExtResource("4_tkgvx")
