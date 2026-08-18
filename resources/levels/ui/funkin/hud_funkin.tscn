@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c2fn4h7rdtf8"]
+
+[ext_resource type="PackedScene" uid="uid://c1ny8j886jexf" path="res://resources/levels/ui/funkin/components/health_bar.tscn" id="1_m7k6q"]
+[ext_resource type="FontFile" uid="uid://dnn4b8ikrsd55" path="res://resources/fonts/fnt_vcr.ttf" id="2_eyer8"]
+[ext_resource type="Script" uid="uid://bg2pdvj68coia" path="res://addons/rubicon_extras/scripts/ui/rubicon_score_display.gd" id="2_ntt4t"]
+[ext_resource type="PackedScene" uid="uid://c88e785mvxc0d" path="res://addons/rubicon/resources/levels/ui/default/judgment.tscn" id="4_eyer8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ssmmx"]
+font = ExtResource("2_eyer8")
+font_size = 24
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(1.5, 2)
+
+[node name="FunkinHUD" type="Control" unique_id=814096794]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthBar" parent="." unique_id=2000574413 instance=ExtResource("1_m7k6q")]
+layout_mode = 1
+grow_horizontal = 1
+
+[node name="ScoreText" type="Label" parent="HealthBar" unique_id=1729475052]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 3.0
+anchor_right = 0.5
+anchor_bottom = 3.0
+offset_left = -265.5
+offset_top = -11.5
+offset_right = 265.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Score: {score_value} - Accuracy: {accuracy_percent}% - Misses: {misses}"
+label_settings = SubResource("LabelSettings_ssmmx")
+horizontal_alignment = 1
+script = ExtResource("2_ntt4t")
+unformatted_text = "Score: {score_value} - Accuracy: {accuracy_percent}% - Misses: {misses}"
+
+[node name="Judgment" parent="." unique_id=1732067903 instance=ExtResource("4_eyer8")]
+layout_mode = 1
