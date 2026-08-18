@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2fn4h7rdtf8"]
 
-[ext_resource type="PackedScene" uid="uid://c1ny8j886jexf" path="res://resources/levels/ui/funkin/components/health_bar.tscn" id="1_m7k6q"]
+[ext_resource type="PackedScene" uid="uid://c1ny8j886jexf" path="res://resources/levels/ui/funkin/components/funkin_health_bar.tscn" id="1_m7k6q"]
 [ext_resource type="FontFile" uid="uid://dnn4b8ikrsd55" path="res://resources/fonts/fnt_vcr.ttf" id="2_eyer8"]
 [ext_resource type="Script" uid="uid://bg2pdvj68coia" path="res://addons/rubicon_extras/scripts/ui/rubicon_score_display.gd" id="2_ntt4t"]
 [ext_resource type="PackedScene" uid="uid://c88e785mvxc0d" path="res://addons/rubicon/resources/levels/ui/default/judgment.tscn" id="4_eyer8"]
@@ -21,10 +21,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_lock_ = true
 
 [node name="HealthBar" parent="." unique_id=2000574413 instance=ExtResource("1_m7k6q")]
 layout_mode = 1
 grow_horizontal = 1
+bump_interpolate_speed = 2.4
 
 [node name="ScoreText" type="Label" parent="HealthBar" unique_id=1729475052]
 layout_mode = 1

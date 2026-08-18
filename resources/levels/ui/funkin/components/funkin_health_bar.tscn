@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://c1ny8j886jexf"]
+
+[ext_resource type="Theme" uid="uid://bb1yexfh7xfc0" path="res://resources/themes/funkin.tres" id="1_65b3u"]
+[ext_resource type="Script" uid="uid://crd76n1jk5nhh" path="res://addons/rubicon/scripts/scene/ui/rubicon_health_bar.gd" id="2_5iquc"]
+[ext_resource type="Script" uid="uid://diko6dcih1ww" path="res://addons/rubicon_extras/scripts/ui/rubicon_health_icon_bumper.gd" id="3_rn8pg"]
+[ext_resource type="SpriteFrames" uid="uid://b3krktfiymb4h" path="res://assets/levels/characters/bf/bf_icon.tres" id="3_yyckf"]
+[ext_resource type="Script" uid="uid://bm6df7cye7cgq" path="res://addons/rubicon_extras/scripts/ui/rubicon_health_icon.gd" id="4_5iquc"]
+
+[sub_resource type="Curve2D" id="Curve2D_73l3f"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 884, 9, 0, 0, 0, 0, 205.16577, 4.2374268, 0, 0, 0, 0, 0, 9)
+}
+point_count = 3
+
+[node name="HealthBar" type="ProgressBar" unique_id=2000574413 node_paths=PackedStringArray("path", "path_follow")]
+anchors_preset = -1
+anchor_left = 0.27
+anchor_right = 0.73
+offset_left = -0.4000244
+offset_top = 56.0
+offset_right = 0.39990234
+offset_bottom = 74.0
+grow_horizontal = 2
+pivot_offset = Vector2(442, 0)
+size_flags_horizontal = 3
+size_flags_vertical = 1
+mouse_filter = 2
+theme = ExtResource("1_65b3u")
+step = 0.1
+value = 50.0
+fill_mode = 1
+show_percentage = false
+script = ExtResource("2_5iquc")
+path = NodePath("Path2D")
+path_follow = NodePath("Path2D/PathFollow2D")
+metadata/_custom_type_script = "uid://crd76n1jk5nhh"
+
+[node name="HealthIconBumper" type="Node" parent="." unique_id=1753206126 node_paths=PackedStringArray("icons_to_bump")]
+script = ExtResource("3_rn8pg")
+icons_to_bump = [NodePath("../Path2D/PathFollow2D/HealthIconL"), NodePath("../Path2D/PathFollow2D/HealthIconR")]
+scale_HealthIconL_base_scale = null
+scale_HealthIconR_base_scale = null
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=37679061]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=772053415]
+curve = SubResource("Curve2D_73l3f")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1230556197]
+position = Vector2(441.97382, 5.898827)
+progress = 442.03595
+rotates = false
+
+[node name="HealthIconL" type="AnimatedSprite2D" parent="Path2D/PathFollow2D" unique_id=2114972775 node_paths=PackedStringArray("health_bar")]
+sprite_frames = ExtResource("3_yyckf")
+animation = &"neutral"
+autoplay = "neutral"
+offset = Vector2(-73, 0)
+script = ExtResource("4_5iquc")
+health_bar = NodePath("../../..")
+neutral_animation_name = &"neutral"
+lose_enabled = true
+lose_animation_name = &"lose"
+lose_trigger_percentage = 0.75
+win_enabled = false
+win_animation_name = &"win"
+win_trigger_percentage = 0.25
+
+[node name="HealthIconR" type="AnimatedSprite2D" parent="Path2D/PathFollow2D" unique_id=500134408 node_paths=PackedStringArray("health_bar")]
+sprite_frames = ExtResource("3_yyckf")
+animation = &"neutral"
+autoplay = "neutral"
+offset = Vector2(-73, 0)
+script = ExtResource("4_5iquc")
+health_bar = NodePath("../../..")
+neutral_animation_name = &"neutral"
+lose_enabled = true
+lose_animation_name = &"lose"
+lose_trigger_percentage = 0.25
+win_enabled = false
+win_animation_name = &"win"
+win_trigger_percentage = 0.75
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]
