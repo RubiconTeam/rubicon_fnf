@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="funkin_judgments.png" width="1389" height="144">
+	<SubTexture name="bad" x="264" y="1" width="187" height="123" frameX="-0" frameY="-0" frameWidth="187" frameHeight="123"/>
+	<SubTexture name="good" x="1" y="1" width="260" height="108" frameX="-0" frameY="-0" frameWidth="260" frameHeight="108"/>
+	<SubTexture name="killer" x="454" y="1" width="342" height="124" frameX="-0" frameY="-0" frameWidth="342" frameHeight="124"/>
+	<SubTexture name="shit" x="1148" y="1" width="240" height="142" frameX="-0" frameY="-0" frameWidth="240" frameHeight="142"/>
+	<SubTexture name="sick" x="799" y="1" width="346" height="139" frameX="-0" frameY="-0" frameWidth="346" frameHeight="139"/>
+</TextureAtlas>
