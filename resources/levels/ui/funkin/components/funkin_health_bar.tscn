@@ -12,14 +12,14 @@ _data = {
 }
 point_count = 3
 
-[node name="HealthBar" type="ProgressBar" unique_id=2000574413 node_paths=PackedStringArray("path", "path_follow")]
+[node name="FunkinHealthBar" type="ProgressBar" unique_id=2000574413 node_paths=PackedStringArray("path", "path_follow")]
 anchors_preset = -1
 anchor_left = 0.27
 anchor_right = 0.73
 offset_left = -0.4000244
 offset_top = 56.0
 offset_right = 0.39990234
-offset_bottom = 74.0
+offset_bottom = 70.0
 grow_horizontal = 2
 pivot_offset = Vector2(442, 0)
 size_flags_horizontal = 3
@@ -35,11 +35,13 @@ path = NodePath("Path2D")
 path_follow = NodePath("Path2D/PathFollow2D")
 metadata/_custom_type_script = "uid://crd76n1jk5nhh"
 
-[node name="HealthIconBumper" type="Node" parent="." unique_id=1753206126 node_paths=PackedStringArray("icons_to_bump")]
+[node name="HealthIconBumper" type="Node" parent="." unique_id=1753206126 node_paths=PackedStringArray("icon_group_first", "icon_group_second")]
 script = ExtResource("3_rn8pg")
-icons_to_bump = [NodePath("../Path2D/PathFollow2D/HealthIconL"), NodePath("../Path2D/PathFollow2D/HealthIconR")]
-scale_HealthIconL_base_scale = null
-scale_HealthIconR_base_scale = null
+icon_group_first = NodePath("../Path2D/PathFollow2D/GroupFirst")
+icon_group_second = NodePath("../Path2D/PathFollow2D/GroupSecond")
+bump_amount_first = Vector2(0.15, 0.15)
+bump_amount_second = Vector2(-0.15, 0.15)
+_icons_base_scale = null
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=37679061]
 show_behind_parent = true
@@ -63,13 +65,15 @@ position = Vector2(441.97382, 5.898827)
 progress = 442.03595
 rotates = false
 
-[node name="HealthIconL" type="AnimatedSprite2D" parent="Path2D/PathFollow2D" unique_id=2114972775 node_paths=PackedStringArray("health_bar")]
+[node name="GroupFirst" type="Node2D" parent="Path2D/PathFollow2D" unique_id=1136049132]
+position = Vector2(-73, 0)
+
+[node name="HealthIconL" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/GroupFirst" unique_id=2114972775 node_paths=PackedStringArray("health_bar")]
 sprite_frames = ExtResource("3_yyckf")
 animation = &"neutral"
 autoplay = "neutral"
-offset = Vector2(-73, 0)
 script = ExtResource("4_5iquc")
-health_bar = NodePath("../../..")
+health_bar = NodePath("../../../..")
 neutral_animation_name = &"neutral"
 lose_enabled = true
 lose_animation_name = &"lose"
@@ -78,13 +82,16 @@ win_enabled = false
 win_animation_name = &"win"
 win_trigger_percentage = 0.25
 
-[node name="HealthIconR" type="AnimatedSprite2D" parent="Path2D/PathFollow2D" unique_id=500134408 node_paths=PackedStringArray("health_bar")]
+[node name="GroupSecond" type="Node2D" parent="Path2D/PathFollow2D" unique_id=1253693466]
+position = Vector2(73, 0)
+scale = Vector2(-1, 1)
+
+[node name="HealthIconR" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/GroupSecond" unique_id=500134408 node_paths=PackedStringArray("health_bar")]
 sprite_frames = ExtResource("3_yyckf")
 animation = &"neutral"
 autoplay = "neutral"
-offset = Vector2(-73, 0)
 script = ExtResource("4_5iquc")
-health_bar = NodePath("../../..")
+health_bar = NodePath("../../../..")
 neutral_animation_name = &"neutral"
 lose_enabled = true
 lose_animation_name = &"lose"

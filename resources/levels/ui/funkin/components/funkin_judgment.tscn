@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://capw8f5ltr8mo"]
+
+[ext_resource type="Script" uid="uid://d62t527ab1ba" path="res://addons/rubicon/scripts/scene/ui/rubicon_judgment_display.gd" id="1_s46ii"]
+[ext_resource type="AnimationLibrary" uid="uid://l1cbqj0b4duo" path="res://assets/levels/ui/funkin/judgments/funkin_judgments_library.tres" id="2_bn3ep"]
+[ext_resource type="SpriteFrames" uid="uid://d0ja20codknua" path="res://assets/levels/ui/funkin/judgments/funkin_judgments.res" id="2_qicta"]
+
+[sub_resource type="Animation" id="Animation_qicta"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tcbtv"]
+length = 0.5
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("funkin_judgments_library/shit"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.5),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ifk7x"]
+length = 0.5
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("funkin_judgments_library/good"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.5),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_clqlr"]
+length = 0.5
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("funkin_judgments_library/sick"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.5),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_teuf5"]
+
+[sub_resource type="Animation" id="Animation_2x4nd"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_l6fnr"]
+length = 0.5
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("funkin_judgments_library/bad"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.5),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_i24ip"]
+length = 0.5
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("funkin_judgments_library/killer"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.5),
+"transitions": PackedFloat32Array(1, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qicta"]
+_data = {
+&"RESET": SubResource("Animation_qicta"),
+&"judgment_bad": SubResource("Animation_tcbtv"),
+&"judgment_good": SubResource("Animation_ifk7x"),
+&"judgment_great": SubResource("Animation_clqlr"),
+&"judgment_miss": SubResource("Animation_teuf5"),
+&"judgment_none": SubResource("Animation_2x4nd"),
+&"judgment_okay": SubResource("Animation_l6fnr"),
+&"judgment_perfect": SubResource("Animation_i24ip")
+}
+
+[node name="FunkinJudgment" type="Control" unique_id=1732067903 node_paths=PackedStringArray("animation_player")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_s46ii")
+animation_player = NodePath("AnimationPlayer")
+metadata/_custom_type_script = "uid://d62t527ab1ba"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=443448318]
+modulate = Color(1, 1, 1, 0)
+sprite_frames = ExtResource("2_qicta")
+animation = &"killer"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D" unique_id=1695177674]
+libraries/funkin_judgments_library = ExtResource("2_bn3ep")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=148362703]
+libraries/ = SubResource("AnimationLibrary_qicta")

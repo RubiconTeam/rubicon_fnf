@@ -116,11 +116,12 @@ scale = Vector2(1, -1)
 position = Vector2(785, 625)
 
 [node name="RubiconInterpolatedCamera2D" type="Camera2D" parent="." unique_id=149236068]
-position = Vector2(785, 625)
+position = Vector2(1226, 625)
 zoom = Vector2(1.25, 1.25)
 script = ExtResource("11_thb4w")
-position_interpolate_target = Vector2(785, 625)
+position_interpolate_target = Vector2(1226, 625)
 rotation_interpolate_enabled = false
+rotation_interpolate_target = 3.1415925
 zoom_interpolate_target = Vector2(1.25, 1.25)
 metadata/_custom_type_script = "uid://bk8alxtg2qxnl"
 
@@ -162,23 +163,31 @@ health_module = NodePath("../../../../RubiconHealthModule")
 
 [node name="HealthIconBumper" parent="UILayer/UI/FunkinHUD/HealthBar" index="0" unique_id=1753206126 node_paths=PackedStringArray("rubicon_level")]
 rubicon_level = NodePath("../../../../..")
-bump_interpolate_speed = 2.4
+_icons_base_scale = Array[Vector2]([])
 
-[node name="HealthIconL" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D" parent_id_path=PackedInt32Array(814096794, 2000574413, 1230556197) index="0" unique_id=2114972775]
+[node name="GroupFirst" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D" parent_id_path=PackedInt32Array(814096794, 2000574413, 1230556197) index="0" unique_id=1136049132]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="HealthIconR" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D" parent_id_path=PackedInt32Array(814096794, 2000574413, 1230556197) index="1" unique_id=500134408]
+[node name="HealthIconL" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D/GroupFirst" index="0" unique_id=2114972775]
 scale = Vector2(1.0000001, 1.0000001)
+frame_progress = 1.0
+
+[node name="GroupSecond" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D" parent_id_path=PackedInt32Array(814096794, 2000574413, 1230556197) index="1" unique_id=1253693466]
+scale = Vector2(-1.0000001, 1.0000001)
+
+[node name="HealthIconR" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D/GroupSecond" index="0" unique_id=500134408]
+scale = Vector2(1.0000001, 1.0000001)
+frame_progress = 1.0
 
 [node name="ScoreText" parent="UILayer/UI/FunkinHUD/HealthBar" index="3" unique_id=1729475052 node_paths=PackedStringArray("level_note_controller")]
 text = "Score: {performance_score_value} - Accuracy: {performance_accuracy_percent}% - Misses: {performance_hits_miss}"
 level_note_controller = NodePath("../../../Player")
 unformatted_text = "Score: {performance_score_value} - Accuracy: {performance_accuracy_percent}% - Misses: {performance_hits_miss}"
 
-[node name="Judgment" parent="UILayer/UI/FunkinHUD" index="1" unique_id=1732067903 node_paths=PackedStringArray("level_note_controller")]
+[node name="FunkinJudgment" parent="UILayer/UI/FunkinHUD" index="1" unique_id=1732067903 node_paths=PackedStringArray("level_note_controller")]
 level_note_controller = NodePath("../../Player")
 
-[node name="Opponent" type="Control" parent="UILayer/UI" unique_id=1414679961]
+[node name="Opponent" type="Control" parent="UILayer/UI" unique_id=1414679961 groups=["controllers"]]
 layout_mode = 1
 anchor_left = 0.25
 anchor_top = 1.0
@@ -216,7 +225,7 @@ offset_left = 240.0
 offset_right = 240.0
 lane_id = 3
 
-[node name="Player" type="Control" parent="UILayer/UI" unique_id=664958273]
+[node name="Player" type="Control" parent="UILayer/UI" unique_id=664958273 groups=["controllers"]]
 layout_mode = 1
 anchor_left = 0.75
 anchor_top = 1.0
