@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cnjbaigs5x5hs" path="res://resources/levels/ui/funkin/mania/Lane.tscn" id="20_y6wax"]
 [ext_resource type="Resource" uid="uid://d3gd5egsmfwfp" path="res://addons/rubicon_mania/resources/default_input_map.tres" id="21_ssmmx"]
 [ext_resource type="Resource" uid="uid://b248dinmb0vlb" path="res://resources/levels/ui/funkin/funkin_note_override.tres" id="22_0ktul"]
+[ext_resource type="PackedScene" uid="uid://dslpk7i6qqjdl" path="res://resources/levels/ui/funkin/components/funkin_note_splash.tscn" id="22_4way8"]
 [ext_resource type="Resource" uid="uid://csifqf5pyurw8" path="res://songs/test/data/test_Player.tres" id="22_7o1jy"]
 
 [sub_resource type="Resource" id="Resource_pwsoq"]
@@ -116,12 +117,11 @@ scale = Vector2(1, -1)
 position = Vector2(785, 625)
 
 [node name="RubiconInterpolatedCamera2D" type="Camera2D" parent="." unique_id=149236068]
-position = Vector2(1226, 625)
+position = Vector2(785, 625)
 zoom = Vector2(1.25, 1.25)
 script = ExtResource("11_thb4w")
-position_interpolate_target = Vector2(1226, 625)
+position_interpolate_target = Vector2(785, 625)
 rotation_interpolate_enabled = false
-rotation_interpolate_target = 3.1415925
 zoom_interpolate_target = Vector2(1.25, 1.25)
 metadata/_custom_type_script = "uid://bk8alxtg2qxnl"
 
@@ -163,21 +163,18 @@ health_module = NodePath("../../../../RubiconHealthModule")
 
 [node name="HealthIconBumper" parent="UILayer/UI/FunkinHUD/HealthBar" index="0" unique_id=1753206126 node_paths=PackedStringArray("rubicon_level")]
 rubicon_level = NodePath("../../../../..")
-_icons_base_scale = Array[Vector2]([])
 
 [node name="GroupFirst" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D" parent_id_path=PackedInt32Array(814096794, 2000574413, 1230556197) index="0" unique_id=1136049132]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="HealthIconL" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D/GroupFirst" index="0" unique_id=2114972775]
 scale = Vector2(1.0000001, 1.0000001)
-frame_progress = 1.0
 
 [node name="GroupSecond" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D" parent_id_path=PackedInt32Array(814096794, 2000574413, 1230556197) index="1" unique_id=1253693466]
 scale = Vector2(-1.0000001, 1.0000001)
 
 [node name="HealthIconR" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D/GroupSecond" index="0" unique_id=500134408]
 scale = Vector2(1.0000001, 1.0000001)
-frame_progress = 1.0
 
 [node name="ScoreText" parent="UILayer/UI/FunkinHUD/HealthBar" index="3" unique_id=1729475052 node_paths=PackedStringArray("level_note_controller")]
 text = "Score: {performance_score_value} - Accuracy: {performance_accuracy_percent}% - Misses: {performance_hits_miss}"
@@ -245,11 +242,25 @@ layout_mode = 1
 offset_left = -240.0
 offset_right = -240.0
 
+[node name="FunkinNoteSplash" parent="UILayer/UI/Player/Lane" unique_id=996934870 instance=ExtResource("22_4way8")]
+layout_mode = 1
+splash_animations = Dictionary[StringName, StringName]({
+&"splash_animation_0": &"splash_left_1",
+&"splash_animation_1": &"splash_left_2"
+})
+
 [node name="Lane2" parent="UILayer/UI/Player" unique_id=95199372 instance=ExtResource("20_y6wax")]
 layout_mode = 1
 offset_left = -80.0
 offset_right = -80.0
 lane_id = 1
+
+[node name="FunkinNoteSplash" parent="UILayer/UI/Player/Lane2" unique_id=75186017 instance=ExtResource("22_4way8")]
+layout_mode = 1
+splash_animations = Dictionary[StringName, StringName]({
+&"splash_animation_0": &"splash_down_1",
+&"splash_animation_1": &"splash_down_2"
+})
 
 [node name="Lane3" parent="UILayer/UI/Player" unique_id=357327897 instance=ExtResource("20_y6wax")]
 layout_mode = 1
@@ -257,11 +268,25 @@ offset_left = 80.0
 offset_right = 80.0
 lane_id = 2
 
+[node name="FunkinNoteSplash" parent="UILayer/UI/Player/Lane3" unique_id=1031357263 instance=ExtResource("22_4way8")]
+layout_mode = 1
+splash_animations = Dictionary[StringName, StringName]({
+&"splash_animation_0": &"splash_up_1",
+&"splash_animation_1": &"splash_up_2"
+})
+
 [node name="Lane4" parent="UILayer/UI/Player" unique_id=1989580582 instance=ExtResource("20_y6wax")]
 layout_mode = 1
 offset_left = 240.0
 offset_right = 240.0
 lane_id = 3
+
+[node name="FunkinNoteSplash" parent="UILayer/UI/Player/Lane4" unique_id=621675242 instance=ExtResource("22_4way8")]
+layout_mode = 1
+splash_animations = Dictionary[StringName, StringName]({
+&"splash_animation_0": &"splash_right_1",
+&"splash_animation_1": &"splash_right_2"
+})
 
 [editable path="UILayer/UI/FunkinHUD"]
 [editable path="UILayer/UI/FunkinHUD/HealthBar"]
