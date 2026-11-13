@@ -19,3 +19,6 @@
 [submodule "gdanimate"]
 	path = addons/gdanimate
 	url = https://github.com/cherrythecool/gdanimate
+[submodule "rubicon_animation_timeline"]
+	path = addons/rubicon_animation_timeline
+	url = https://github.com/RubiconTeam/rubicon_animation_timeline
