@@ -62,7 +62,6 @@ metadata/_custom_type_script = "uid://c7espnyhcgtth"
 
 [node name="RubiconLevelClock" type="Node" parent="." unique_id=39912151]
 script = ExtResource("5_fkl2l")
-warning_use_rubicon_timeline = false
 metadata/_custom_type_script = "uid://ca1311fn5lngq"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RubiconLevelClock" unique_id=189806761]
@@ -154,7 +153,6 @@ point_map = {
 &"Opponent": NodePath("../../OpponentCameraPoint"),
 &"Player": NodePath("../../PlayerCameraPoint")
 }
-_current_point = &"Opponent"
 metadata/_custom_type_script = "uid://dk0ffxu4bdk3c"
 
 [node name="RubiconCameraBumper" type="Node" parent="RubiconInterpolatedCamera2D" unique_id=1339474565]
@@ -189,15 +187,14 @@ health_module = NodePath("../../../../RubiconHealthModule")
 rubicon_level = NodePath("../../../../..")
 
 [node name="GroupFirst" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D" parent_id_path=PackedInt32Array(814096794, 2000574413, 1230556197) index="0" unique_id=1136049132]
-scale = Vector2(1.0000001, 1.0000001)
+scale = Vector2(1.0000025, 1.0000025)
 
 [node name="HealthIconL" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D/GroupFirst" index="0" unique_id=2114972775]
 scale = Vector2(1.0000001, 1.0000001)
 frame_progress = 1.0
-win_enabled = false
 
 [node name="GroupSecond" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D" parent_id_path=PackedInt32Array(814096794, 2000574413, 1230556197) index="1" unique_id=1253693466]
-scale = Vector2(-1.0000001, 1.0000001)
+scale = Vector2(-1.0000025, 1.0000025)
 
 [node name="HealthIconR" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D/GroupSecond" index="0" unique_id=500134408]
 scale = Vector2(1.0000001, 1.0000001)
