@@ -282,19 +282,16 @@ script = ExtResource("1_3fex7")
 animation_player = NodePath("RootAnimationPlayer")
 dancing_animations = Array[StringName]([&"dance_idle"])
 animations = Dictionary[StringName, StringName]({
-&"miss_down": &"miss_down",
-&"miss_left": &"miss_left",
-&"miss_right": &"miss_right",
-&"miss_up": &"miss_up",
-&"sing_down": &"sing_down",
-&"sing_left": &"sing_left",
-&"sing_right": &"sing_right",
-&"sing_up": &"sing_up"
+&"mania_lane0_miss": &"miss_left",
+&"mania_lane0_sing": &"sing_left",
+&"mania_lane1_miss": &"miss_down",
+&"mania_lane1_sing": &"sing_down",
+&"mania_lane2_miss": &"miss_up",
+&"mania_lane2_sing": &"sing_up",
+&"mania_lane3_miss": &"miss_right",
+&"mania_lane3_sing": &"sing_right",
+&"sing_left": &"dance_idle"
 })
-mania_anim_groups = Dictionary[StringName, int]({
-&"sing": 4
-})
-dancing_animations = Array[StringName]([&"dance_idle"])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=450672484]
 position = Vector2(-1, -185)

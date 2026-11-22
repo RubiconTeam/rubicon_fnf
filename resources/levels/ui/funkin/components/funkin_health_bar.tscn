@@ -41,7 +41,6 @@ icon_group_first = NodePath("../Path2D/PathFollow2D/GroupFirst")
 icon_group_second = NodePath("../Path2D/PathFollow2D/GroupSecond")
 bump_amount_first = Vector2(0.15, 0.15)
 bump_amount_second = Vector2(-0.15, 0.15)
-_icons_base_scale = null
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=37679061]
 show_behind_parent = true
@@ -74,13 +73,6 @@ animation = &"neutral"
 autoplay = "neutral"
 script = ExtResource("4_5iquc")
 health_bar = NodePath("../../../..")
-neutral_animation_name = &"neutral"
-lose_enabled = true
-lose_animation_name = &"lose"
-lose_trigger_percentage = 0.75
-win_enabled = false
-win_animation_name = &"win"
-win_trigger_percentage = 0.25
 
 [node name="GroupSecond" type="Node2D" parent="Path2D/PathFollow2D" unique_id=1253693466]
 position = Vector2(73, 0)
@@ -92,12 +84,7 @@ animation = &"neutral"
 autoplay = "neutral"
 script = ExtResource("4_5iquc")
 health_bar = NodePath("../../../..")
-neutral_animation_name = &"neutral"
-lose_enabled = true
-lose_animation_name = &"lose"
 lose_trigger_percentage = 0.25
-win_enabled = false
-win_animation_name = &"win"
 win_trigger_percentage = 0.75
 
 [connection signal="value_changed" from="." to="." method="_on_value_changed"]

@@ -62,6 +62,7 @@ metadata/_custom_type_script = "uid://c7espnyhcgtth"
 
 [node name="RubiconLevelClock" type="Node" parent="." unique_id=39912151]
 script = ExtResource("5_fkl2l")
+warning_use_rubicon_timeline = false
 metadata/_custom_type_script = "uid://ca1311fn5lngq"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RubiconLevelClock" unique_id=189806761]
@@ -85,27 +86,49 @@ bus = &"Music"
 
 [node name="Stage" parent="." unique_id=52964114 instance=ExtResource("9_1qbvm")]
 
-[node name="Bf" parent="Stage" unique_id=32254497 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("10_tweun")]
-position = Vector2(1388, 869)
+[node name="bf" parent="Stage" unique_id=657420159 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("10_tweun")]
+position = Vector2(1320, 876)
 level_note_controller = NodePath("../../UILayer/UI/Player")
-singing_step_time_value = 0.5
-transition_update_queued_animations = true
-
-[node name="BfOpponent" parent="Stage" unique_id=753393350 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("10_tweun")]
-position = Vector2(617, 869)
-rotation = 3.1415925
-scale = Vector2(1, -1)
-level_note_controller = NodePath("../../UILayer/UI/Opponent")
-singing_step_time_value = 0.5
 animations = Dictionary[StringName, StringName]({
-&"miss_down": &"sing_down",
-&"miss_left": &"miss_right",
-&"miss_right": &"miss_left",
-&"miss_up": &"sing_up",
-&"sing_down": &"sing_down",
-&"sing_left": &"sing_right",
-&"sing_right": &"sing_left",
-&"sing_up": &"sing_up"
+&"mania_lane0_miss": &"miss_left",
+&"mania_lane0_sing": &"sing_left",
+&"mania_lane1_miss": &"miss_down",
+&"mania_lane1_sing": &"sing_down",
+&"mania_lane2_miss": &"miss_up",
+&"mania_lane2_sing": &"sing_up",
+&"mania_lane3_miss": &"miss_right",
+&"mania_lane3_sing": &"sing_right",
+&"miss_down": &"",
+&"miss_left": &"",
+&"miss_right": &"",
+&"miss_up": &"",
+&"sing_down": &"",
+&"sing_left": &"dance_idle",
+&"sing_right": &"",
+&"sing_up": &""
+})
+
+[node name="bf_opponent" parent="Stage" unique_id=1686499743 node_paths=PackedStringArray("level_note_controller") instance=ExtResource("10_tweun")]
+position = Vector2(661, 876)
+scale = Vector2(-1, 1)
+level_note_controller = NodePath("../../UILayer/UI/Opponent")
+animations = Dictionary[StringName, StringName]({
+&"mania_lane0_miss": &"miss_left",
+&"mania_lane0_sing": &"sing_right",
+&"mania_lane1_miss": &"miss_down",
+&"mania_lane1_sing": &"sing_down",
+&"mania_lane2_miss": &"miss_up",
+&"mania_lane2_sing": &"sing_up",
+&"mania_lane3_miss": &"miss_right",
+&"mania_lane3_sing": &"sing_left",
+&"miss_down": &"",
+&"miss_left": &"",
+&"miss_right": &"",
+&"miss_up": &"",
+&"sing_down": &"",
+&"sing_left": &"dance_idle",
+&"sing_right": &"",
+&"sing_up": &""
 })
 
 [node name="PlayerCameraPoint" type="Marker2D" parent="." unique_id=401965836]
@@ -131,6 +154,7 @@ point_map = {
 &"Opponent": NodePath("../../OpponentCameraPoint"),
 &"Player": NodePath("../../PlayerCameraPoint")
 }
+_current_point = &"Opponent"
 metadata/_custom_type_script = "uid://dk0ffxu4bdk3c"
 
 [node name="RubiconCameraBumper" type="Node" parent="RubiconInterpolatedCamera2D" unique_id=1339474565]
@@ -169,12 +193,15 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="HealthIconL" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D/GroupFirst" index="0" unique_id=2114972775]
 scale = Vector2(1.0000001, 1.0000001)
+frame_progress = 1.0
+win_enabled = false
 
 [node name="GroupSecond" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D" parent_id_path=PackedInt32Array(814096794, 2000574413, 1230556197) index="1" unique_id=1253693466]
 scale = Vector2(-1.0000001, 1.0000001)
 
 [node name="HealthIconR" parent="UILayer/UI/FunkinHUD/HealthBar/Path2D/PathFollow2D/GroupSecond" index="0" unique_id=500134408]
 scale = Vector2(1.0000001, 1.0000001)
+frame_progress = 1.0
 
 [node name="ScoreText" parent="UILayer/UI/FunkinHUD/HealthBar" index="3" unique_id=1729475052 node_paths=PackedStringArray("level_note_controller")]
 text = "Score: {performance_score_value} - Accuracy: {performance_accuracy_percent}% - Misses: {performance_hits_miss}"
