@@ -24,14 +24,14 @@ We plan to have a wiki to help developers better understand the engine more easi
 
 ## Obtaining Rubicon
 
-We like to keep Rubicon short in dependencies, all you really need is [Git](https://git-scm.com) and [Godot](https://godotengine.org), preferably v4.5.1 but it will most likely work in similar versions.
+We like to keep Rubicon short in dependencies, all you really need is [Git](https://git-scm.com) and [Godot](https://godotengine.org), preferably the latest version, but it will most likely work in versions above 4.5.
 
 After that, all you need to do is cloning this repository **recursively** as you'll need the submodules for the engine to work:
 ```
 git clone --recurse-submodule https://github.com/RubiconTeam/rubicon_fnf
 ```
 
-Although this repository is highly recommended to use Rubicon, its mostly a compilation of our engine's plugins. You can get the engine in its basic form by cloning the [Rubicon Addon](https://github.com/RubiconTeam/rubicon) and optionally but highly recommended, the [Mania Addon](https://github.com/RubiconTeam/rubicon_mania)
+Although this repository is highly recommended to use Rubicon, its mostly a compilation of our engine's plugins. You can get the engine in its basic form by cloning the [Rubicon Addon](https://github.com/RubiconTeam/rubicon), [Mania Submodule](https://github.com/RubiconTeam/rubicon_mania) or [Extras Submodule](https://github.com/RubiconTeam/rubicon_extras).
 
 # Contributing
 
@@ -46,10 +46,18 @@ Rubicon Engine's code is licensed under the [Apache License, Version 2.0](https:
 # Credits
 ## Developers
 - [anniebuue](https://twitter.com/i/user/875471004365185024) - Main Developer
-- [legole0](https://twitter.com/i/user/3091959774) - Main Developer
-## Contributors
+- [legole0](https://github.com/legole0) - Main Developer
+## Contributors (Code)
+- [BreezyMelee](https://github.com/AllStarBreezy)
+- [cherrythecool](https://github.com/cherrythecool)
+- [rashbunn](https://github.com/lasystuff)
+- [userchroma](https://github.com/userchroma)
+- [Crimsickle](https://github.com/Crimsickle)
+- [remagetsCode](https://github.com/remagetsCode)
+## Contributors (Misc.)
 - [BeefStarchJello](https://twitter.com/i/user/1155441339246551043) - Made the logo
 - [DooDii](https://twitter.com/i/user/1373127588005224455) - Made the banner
+- []
 ## Special Credits
 - [firubii](https://github.com/firubii/) - Note system derived from Fantasy Engine ([HoloFunk](https://gamejolt.com/games/holofunk/754195))
 - [cherrythecool](https://github.com/cherrythecool) - [GDAnimate](https://github.com/cherrythecool/gdanimate)
